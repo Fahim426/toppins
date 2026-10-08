@@ -5,6 +5,7 @@ export type IconName =
   | "phone"
   | "pin"
   | "arrow"
+  | "check"
   | "menu"
   | "close"
   | "list"
@@ -76,6 +77,12 @@ export function Icon({ name, size = 20, ...rest }: Props) {
       return (
         <svg {...common} {...stroke}>
           <path d="M5 12h14M13 6l6 6-6 6" />
+        </svg>
+      );
+    case "check":
+      return (
+        <svg {...common} {...stroke}>
+          <path d="M5 12.5l4.5 4.5L19 7.5" />
         </svg>
       );
     case "menu":

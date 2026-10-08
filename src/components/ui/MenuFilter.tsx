@@ -5,12 +5,15 @@ import { m, type Variants } from "framer-motion";
 import { ProductCard } from "@/components/ui/ProductCard";
 import type { MenuCategory, MenuItem } from "@/data/menu";
 import { cn } from "@/lib/cn";
+import { setUrlHash, useUrlHash } from "@/lib/urlHash";
 
 type Props = {
   items: MenuItem[];
   categories: { id: MenuCategory; label: string }[];
-  /** Max items shown per filter (Home preview). */
+  /** Max items shown per filter (Home preview). Omit to show everything. */
   limit?: number;
+  /** Keep the selected category in the URL hash (/menu#pizza). Used on /menu only. */
+  syncUrl?: boolean;
 };
 
 const list: Variants = {
@@ -22,12 +25,24 @@ const card: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
 };
 
-/** Interactive category filter. Categories with no visible items are never passed in. */
-export function MenuFilter({ items, categories, limit = 8 }: Props) {
-  const [active, setActive] = useState<MenuCategory | "all">("all");
+/**
+ * Interactive category filter shared by Home and /menu.
+ * Callers only pass categories that have visible items, so empty categories never render.
+ */
+export function MenuFilter({ items, categories, limit, syncUrl = false }: Props) {
+  const [localActive, setLocalActive] = useState<MenuCategory | "all">("all");
+  const hash = useUrlHash();
+
+  const fromHash = categories.find((c) => c.id === hash)?.id;
+  const active: MenuCategory | "all" = syncUrl ? (fromHash ?? "all") : localActive;
+
+  const select = (id: MenuCategory | "all") => {
+    if (syncUrl) setUrlHash(id === "all" ? null : id);
+    else setLocalActive(id);
+  };
 
   const matching = active === "all" ? items : items.filter((i) => i.category === active);
-  const shown = matching.slice(0, limit);
+  const shown = limit ? matching.slice(0, limit) : matching;
   const chips = [{ id: "all" as const, label: "All" }, ...categories];
 
   return (
@@ -35,7 +50,7 @@ export function MenuFilter({ items, categories, limit = 8 }: Props) {
       <div
         role="group"
         aria-label="Filter menu by category"
-        className="-mx-5 flex gap-2 overflow-x-auto px-5 pb-2 [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0 [&::-webkit-scrollbar]:hidden"
+        className="-mx-5 flex gap-2 overflow-x-auto px-5 py-1 [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0 [&::-webkit-scrollbar]:hidden"
       >
         {chips.map((chip) => {
           const pressed = active === chip.id;
@@ -44,7 +59,7 @@ export function MenuFilter({ items, categories, limit = 8 }: Props) {
               key={chip.id}
               type="button"
               aria-pressed={pressed}
-              onClick={() => setActive(chip.id)}
+              onClick={() => select(chip.id)}
               className={cn(
                 "min-h-11 shrink-0 rounded-md border px-4 text-sm font-semibold transition-colors duration-200",
                 pressed
@@ -60,6 +75,7 @@ export function MenuFilter({ items, categories, limit = 8 }: Props) {
 
       <p role="status" className="sr-only">
         Showing {shown.length} {shown.length === 1 ? "item" : "items"}
+        {active !== "all" && ` in ${categories.find((c) => c.id === active)?.label}`}
       </p>
 
       <m.ul

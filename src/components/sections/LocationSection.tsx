@@ -7,7 +7,8 @@ import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { site } from "@/data/site";
 import { getHoursWithDays } from "@/lib/hours";
 
-export function LocationSection() {
+/** `page` renders the heading as the page H1 (used on /contact). */
+export function LocationSection({ page = false }: { page?: boolean }) {
   const details = [
     { label: "Place", value: site.name },
     { label: "Plus code", value: site.address.plusCode },
@@ -29,7 +30,12 @@ export function LocationSection() {
     <Section id="location" labelledBy="location-title">
       <Container className="grid gap-12 lg:grid-cols-12 lg:gap-10">
         <Reveal className="lg:col-span-5">
-          <SectionHeading id="location-title" eyebrow="Visit" title="Find your way to Toppins." />
+          <SectionHeading
+            id="location-title"
+            as={page ? "h1" : "h2"}
+            eyebrow="Visit"
+            title="Find your way to Toppins."
+          />
 
           <dl className="mt-10 divide-y divide-espresso/15 border-y border-espresso/15">
             {details.map((d) => (

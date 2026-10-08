@@ -8,12 +8,12 @@ import type { ImageId } from "@/data/images";
 type Category = { title: string; href: string; slot: ImageId; index: string };
 
 const colA: Category[] = [
-  { title: "Bakery", href: "/menu", slot: "category-bakery", index: "01" },
+  { title: "Bakery", href: "/menu#bakery", slot: "category-bakery", index: "01" },
   { title: "Cafe Favourites", href: "/menu", slot: "category-cafe", index: "03" },
 ];
 const colB: Category[] = [
   { title: "Celebration Cakes", href: "/cakes", slot: "category-cakes", index: "02" },
-  { title: "Desserts & Drinks", href: "/menu", slot: "category-desserts", index: "04" },
+  { title: "Desserts & Drinks", href: "/menu#desserts", slot: "category-desserts", index: "04" },
 ];
 
 export function BrandIntro() {

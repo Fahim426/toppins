@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { cn } from "@/lib/cn";
 
 type Props = {
+  id?: string;
   title: string;
   /** Compact uppercase label above the title, e.g. "The menu" */
   eyebrow?: string;
@@ -10,12 +11,13 @@ type Props = {
   description?: ReactNode;
   as?: "h1" | "h2" | "h3";
   align?: "left" | "center";
-  /** "dark" is for use on espresso / photo backgrounds */
-  tone?: "light" | "dark";
+  /** "dark" for espresso / photo backgrounds, "sand" for sand backgrounds (caramel text fails contrast there) */
+  tone?: "light" | "dark" | "sand";
   className?: string;
 };
 
 export function SectionHeading({
+  id,
   title,
   eyebrow,
   number,
@@ -35,7 +37,7 @@ export function SectionHeading({
           className={cn(
             "type-label mb-5 flex items-center gap-3",
             centered && "justify-center",
-            dark ? "text-butter" : "text-caramel-text",
+            dark ? "text-butter" : tone === "sand" ? "text-espresso/80" : "text-caramel-text",
           )}
         >
           {number && <span>{number}</span>}
@@ -45,7 +47,7 @@ export function SectionHeading({
           {eyebrow && <span>{eyebrow}</span>}
         </p>
       )}
-      <Tag className={cn("type-display-l", dark ? "text-cream" : "text-espresso")}>{title}</Tag>
+      <Tag id={id} className={cn("type-display-l", dark ? "text-cream" : "text-espresso")}>{title}</Tag>
       {description && (
         <p
           className={cn(

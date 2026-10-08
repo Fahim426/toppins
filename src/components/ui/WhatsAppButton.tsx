@@ -9,6 +9,8 @@ type Props = {
   children?: string;
   /** Compact visible label for narrow screens; the full label stays as the accessible name. */
   shortLabel?: string;
+  /** Accessible name when the visible label is ambiguous, e.g. "Order Pizza on WhatsApp" */
+  ariaLabel?: string;
   className?: string;
 };
 
@@ -25,6 +27,7 @@ export function WhatsAppButton({
   size = "md",
   children,
   shortLabel,
+  ariaLabel,
   className,
 }: Props) {
   const label = children ?? defaultLabel[request.intent];
@@ -35,7 +38,7 @@ export function WhatsAppButton({
       size={size}
       icon="whatsapp"
       className={className}
-      aria-label={shortLabel ? label : undefined}
+      aria-label={ariaLabel ?? (shortLabel ? label : undefined)}
     >
       {shortLabel ? (
         <>

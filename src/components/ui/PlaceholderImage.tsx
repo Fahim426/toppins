@@ -20,6 +20,8 @@ type Common = {
   /** "dark" placeholder is used where text sits on top (hero) */
   tone?: "light" | "dark";
   className?: string;
+  /** Responsive aspect-ratio class (e.g. "aspect-[4/3] sm:aspect-[3/2]"); replaces the registry ratio. */
+  ratioClass?: string;
   imgClassName?: string;
   /** Override the registry alt text */
   alt?: string;
@@ -32,7 +34,7 @@ export type PlaceholderImageProps = Common & (SlotProps | FileProps);
  * correct aspect ratio. In development the block is labelled with the path to replace.
  */
 export function PlaceholderImage(props: PlaceholderImageProps) {
-  const { sizes = "100vw", priority, tone = "light", className, imgClassName } = props;
+  const { sizes = "100vw", priority, tone = "light", className, ratioClass, imgClassName } = props;
 
   let path: string | null;
   let ratio: [number, number];
@@ -60,8 +62,8 @@ export function PlaceholderImage(props: PlaceholderImageProps) {
     available = props.src !== null;
   }
 
-  const frame = cn("relative overflow-hidden rounded-lg", className);
-  const style = { aspectRatio: `${ratio[0]} / ${ratio[1]}` };
+  const frame = cn("relative overflow-hidden rounded-lg", ratioClass, className);
+  const style = ratioClass ? undefined : { aspectRatio: `${ratio[0]} / ${ratio[1]}` };
 
   if (available && path) {
     return (

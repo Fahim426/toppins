@@ -33,16 +33,20 @@ export type MenuItem = {
   tags: string[];
   /** Sample data for development. Filtered out in production (see src/lib/menu.ts). */
   placeholder?: boolean;
+  /** Show in the Home "Signature" grid. Only for items the owner has confirmed. */
+  signature?: boolean;
+  /** Shows the BESTSELLER tag. Only set when the owner confirms. */
+  bestseller?: boolean;
 };
 
 // TODO(owner): replace the placeholder items below with the real menu
 // (names, categories, prices, photos). Names here come only from items publicly
 // mentioned online; descriptions and prices are intentionally empty.
 export const menuItems: MenuItem[] = [
-  { id: "sample-cake", name: "Cake", category: "cakes", description: "", price: null, image: null, tags: [], placeholder: true },
+  { id: "sample-cake", name: "Cake", category: "cakes", description: "", price: null, image: null, tags: [], placeholder: true, signature: true },
   { id: "sample-pastry", name: "Pastry", category: "bakery", description: "", price: null, image: null, tags: [], placeholder: true },
   { id: "sample-chicken-sandwich", name: "Chicken sandwich", category: "sandwiches", description: "", price: null, image: null, tags: [], placeholder: true },
-  { id: "sample-pizza", name: "Pizza", category: "pizza", description: "", price: null, image: null, tags: [], placeholder: true },
-  { id: "sample-shawarma", name: "Shawarma", category: "shawarma", description: "", price: null, image: null, tags: [], placeholder: true },
+  { id: "sample-pizza", name: "Pizza", category: "pizza", description: "", price: null, image: null, tags: [], placeholder: true, signature: true },
+  { id: "sample-shawarma", name: "Shawarma", category: "shawarma", description: "", price: null, image: null, tags: [], placeholder: true, signature: true },
   { id: "sample-falooda", name: "Falooda", category: "desserts", description: "", price: null, image: null, tags: [], placeholder: true },
 ];

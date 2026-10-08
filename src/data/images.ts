@@ -45,6 +45,9 @@ export const images = {
     note: "Cinematic, darker or mid-tone; text sits over it. Keep subject centre or right so it survives a portrait crop on mobile.",
   }),
 
+  "cakes-feature": slot("/images/cakes/feature.jpg", [4, 5], 1400, "Home: Cakes", "Cakes at Toppins"),
+  "cakes-detail": slot("/images/cakes/detail.jpg", [1, 1], 900, "Home: Cakes", "Cake detail at Toppins", { note: "Close crop, shown as a small inset over the feature photo." }),
+
   "category-bakery": slot("/images/food/category-bakery.jpg", [3, 4], 1200, "Home: Brand intro", "Bakery favourites at Toppins"),
   "category-cakes": slot("/images/food/category-cakes.jpg", [3, 4], 1200, "Home: Brand intro", "Celebration cakes at Toppins"),
   "category-cafe": slot("/images/food/category-cafe.jpg", [3, 4], 1200, "Home: Brand intro", "Cafe favourites at Toppins"),

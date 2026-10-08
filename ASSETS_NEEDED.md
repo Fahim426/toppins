@@ -20,6 +20,8 @@ Once the logo arrives, the palette in `src/app/globals.css` is checked against i
 | Slot | Path | Ratio | Recommended px | Used in | Status | Notes |
 |---|---|---|---|---|---|---|
 | `hero` | `public/images/hero/hero.jpg` | 16:9 | 2400×1350 | Home: Hero | needed | Cinematic, darker or mid-tone; text sits over it. Keep subject centre or right so it survives a portrait crop on mobile. |
+| `cakes-feature` | `public/images/cakes/feature.jpg` | 4:5 | 1400×1750 | Home: Cakes | needed |  |
+| `cakes-detail` | `public/images/cakes/detail.jpg` | 1:1 | 900×900 | Home: Cakes | needed | Close crop, shown as a small inset over the feature photo. |
 | `category-bakery` | `public/images/food/category-bakery.jpg` | 3:4 | 1200×1600 | Home: Brand intro | needed |  |
 | `category-cakes` | `public/images/food/category-cakes.jpg` | 3:4 | 1200×1600 | Home: Brand intro | needed |  |
 | `category-cafe` | `public/images/food/category-cafe.jpg` | 3:4 | 1200×1600 | Home: Brand intro | needed |  |

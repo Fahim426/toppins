@@ -1,0 +1,62 @@
+import type { ReactNode } from "react";
+import { cn } from "@/lib/cn";
+
+type Props = {
+  title: string;
+  /** Compact uppercase label above the title, e.g. "The menu" */
+  eyebrow?: string;
+  /** Optional editorial index, e.g. "02" */
+  number?: string;
+  description?: ReactNode;
+  as?: "h1" | "h2" | "h3";
+  align?: "left" | "center";
+  /** "dark" is for use on espresso / photo backgrounds */
+  tone?: "light" | "dark";
+  className?: string;
+};
+
+export function SectionHeading({
+  title,
+  eyebrow,
+  number,
+  description,
+  as: Tag = "h2",
+  align = "left",
+  tone = "light",
+  className,
+}: Props) {
+  const dark = tone === "dark";
+  const centered = align === "center";
+
+  return (
+    <div className={cn("max-w-3xl", centered && "mx-auto text-center", className)}>
+      {(eyebrow || number) && (
+        <p
+          className={cn(
+            "type-label mb-5 flex items-center gap-3",
+            centered && "justify-center",
+            dark ? "text-butter" : "text-caramel-text",
+          )}
+        >
+          {number && <span>{number}</span>}
+          {number && eyebrow && (
+            <span aria-hidden="true" className="h-px w-8 bg-current opacity-60" />
+          )}
+          {eyebrow && <span>{eyebrow}</span>}
+        </p>
+      )}
+      <Tag className={cn("type-display-l", dark ? "text-cream" : "text-espresso")}>{title}</Tag>
+      {description && (
+        <p
+          className={cn(
+            "type-body-l mt-5 max-w-[56ch]",
+            centered && "mx-auto",
+            dark ? "text-cream/80" : "text-espresso/75",
+          )}
+        >
+          {description}
+        </p>
+      )}
+    </div>
+  );
+}

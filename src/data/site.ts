@@ -15,6 +15,7 @@ export const site = {
 
   phone: {
     display: "+91 99950 95100",
+    e164: PHONE_E164,
     tel: `tel:${PHONE_E164}`,
     verified: true,
   },
@@ -73,8 +74,9 @@ export const site = {
 
   priceBand: "₹1–200", // verified (Google listing)
 
-  // TODO(owner): set the production domain (used for canonical, sitemap, OG)
-  url: "https://example.com",
+  // TODO(owner): set the production domain (canonical, sitemap, OG, JSON-LD url).
+  // Can also be set with NEXT_PUBLIC_SITE_URL. JSON-LD omits url until this is verified.
+  url: { value: "https://example.com", verified: false } as Unverifiable<string>,
 } as const;
 
 export type Site = typeof site;

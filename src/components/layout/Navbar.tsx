@@ -78,12 +78,20 @@ export function Navbar() {
     desktop.addEventListener("change", onBreakpoint);
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+    // Take the page behind the open menu out of the tab order and the accessibility tree
+    const background = document.querySelectorAll<HTMLElement>("[data-menu-inert]");
+    background.forEach((el) => {
+      el.inert = true;
+    });
     panelRef.current?.querySelector<HTMLElement>("a[href]")?.focus();
 
     return () => {
       document.removeEventListener("keydown", onKeyDown);
       desktop.removeEventListener("change", onBreakpoint);
       document.body.style.overflow = previousOverflow;
+      background.forEach((el) => {
+        el.inert = false;
+      });
     };
   }, [open]);
 

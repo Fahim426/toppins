@@ -10,6 +10,7 @@ npm run dev          # local dev server (placeholder labels visible)
 npm run build        # production build
 npm run lint         # ESLint
 npm run assets:doc   # regenerate ASSETS_NEEDED.md from src/data/images.ts
+npm run check:contrast  # WCAG contrast check of every text/background pair in the palette
 ```
 
 ## Editing business data
@@ -31,6 +32,18 @@ Until then a tinted placeholder renders at the right aspect ratio, labelled with
 
 Sample menu items (`placeholder: true`) show in development only. To show them in a production build, set
 `NEXT_PUBLIC_SHOW_PLACEHOLDERS=true` (see `.env.example`).
+
+## SEO and structured data
+
+- Per-page metadata comes from `pageMetadata()` in `src/lib/seo.ts`; the root layout holds the defaults and the title template.
+- Set the production domain with `NEXT_PUBLIC_SITE_URL` (or `site.url` in `src/data/site.ts`). Until then canonicals, sitemap and robots point at `https://example.com`.
+- JSON-LD (`Bakery`) is built from `site.ts` in `src/lib/jsonld.ts`. Unverified fields are left out: url, opening hours, rating. No geo and no street address are emitted.
+- Open Graph / Twitter images and the favicon are generated placeholders (`src/app/opengraph-image.tsx`, `icon.tsx`, `apple-icon.tsx`). See ASSETS_NEEDED.md for replacing them.
+
+## Accessibility
+
+`npm run check:contrast` measures every text and background pair against WCAG AA. Re-run it if you change a colour token.
+When the real hero photo is added, check that the header and hero text stay readable over it (the scrims in `Hero.tsx` are tuned for mid-brightness photos).
 
 ## Outstanding TODO(owner)
 

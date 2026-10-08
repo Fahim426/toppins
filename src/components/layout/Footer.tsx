@@ -16,7 +16,7 @@ const linkClass = "underline-offset-4 hover:text-butter hover:underline";
 export function Footer() {
   return (
     // bottom padding leaves room for the sticky mobile action bar
-    <footer className="dark-surface bg-espresso pt-16 pb-24 text-cream md:pb-10 lg:pt-24">
+    <footer data-menu-inert className="dark-surface bg-espresso pt-16 pb-24 text-cream md:pb-10 lg:pt-24">
       <Container>
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-5">

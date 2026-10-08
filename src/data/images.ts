@@ -74,9 +74,6 @@ export const images = {
   "gallery-9": slot("/images/gallery/gallery-09.jpg", [4, 3], 1600, "Home: Gallery", "Toppins gallery photo 9"),
   "gallery-10": slot("/images/gallery/gallery-10.jpg", [3, 4], 1200, "Home: Gallery", "Toppins gallery photo 10"),
 
-  "og-image": slot("/images/og.jpg", [1200, 630], 1200, "SEO: Open Graph / Twitter", "Toppins Bake & Cafe", {
-    note: "Logo or best food photo; keep key content inside the centre 1000×500.",
-  }),
 } satisfies Record<string, ImageSlot>;
 
 export type ImageId = keyof typeof images;
@@ -91,7 +88,11 @@ export const productImageSpec = {
 
 /** Logo files expected in /public/images/. */
 export const logoSpec = [
-  { path: "/images/logo.svg", note: "Primary logo, SVG preferred (colour)." },
-  { path: "/images/logo-light.svg", note: "Cream/white version for dark backgrounds." },
-  { path: "/images/icon.png", note: "Square mark, at least 512×512 px, for favicon and app icon." },
+  { path: "public/images/logo.svg", note: "Primary logo, SVG preferred (colour)." },
+  { path: "public/images/logo-light.svg", note: "Cream/white version for dark backgrounds." },
+  { path: "public/images/icon.png", note: "Square mark, at least 512×512 px. Replaces the placeholder \"T\" favicon (src/app/icon.tsx, apple-icon.tsx)." },
+  {
+    path: "src/app/opengraph-image.jpg",
+    note: "Optional. 1200×630, keep key content in the centre 1000×500. Until supplied a generated brand card is used (src/app/opengraph-image.tsx); to use a photo add this file, delete the .tsx, and point lib/seo.ts at the new image.",
+  },
 ];

@@ -4,13 +4,14 @@ import { MenuEmpty } from "@/components/ui/MenuEmpty";
 import { MenuFilter } from "@/components/ui/MenuFilter";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
+import { pageMetadata } from "@/lib/seo";
 import { getVisibleCategories, getVisibleItems } from "@/lib/menu";
 
-export const metadata: Metadata = {
-  title: "Menu | Toppins Bake & Cafe",
-  description:
-    "Browse the Toppins Bake & Cafe menu by category and order any item on WhatsApp.",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "Menu",
+  description: "Browse the Toppins Bake & Cafe menu by category and order any item on WhatsApp.",
+  path: "/menu",
+});
 
 export default function MenuPage() {
   const items = getVisibleItems();
@@ -25,7 +26,7 @@ export default function MenuPage() {
       />
       <Container className="pb-24 lg:pb-36">
         {items.length > 0 ? (
-          <MenuFilter items={items} categories={categories} syncUrl />
+          <MenuFilter items={items} categories={categories} syncUrl headingAs="h2" />
         ) : (
           <MenuEmpty />
         )}

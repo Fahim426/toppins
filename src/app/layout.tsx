@@ -4,6 +4,10 @@ import { Footer } from "@/components/layout/Footer";
 import { MobileActionBar } from "@/components/layout/MobileActionBar";
 import { Navbar } from "@/components/layout/Navbar";
 import { MotionProvider } from "@/components/MotionProvider";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { site } from "@/data/site";
+import { buildBakeryJsonLd } from "@/lib/jsonld";
+import { defaultDescription, defaultTitle, siteUrl } from "@/lib/seo";
 import "./globals.css";
 
 const display = DM_Serif_Display({
@@ -27,11 +31,21 @@ const malayalam = Noto_Sans_Malayalam({
   preload: false,
 });
 
-// Full SEO / Open Graph / JSON-LD lands in Phase 4.
 export const metadata: Metadata = {
-  title: "Toppins Bake & Cafe | Bakery, Cakes & Cafe in Perumbadappu",
-  description:
-    "Discover Toppins Bake & Cafe in Perumbadappu, Kerala — cakes, bakery favourites, cafe bites, desserts and more. Explore the menu, visit us or order on WhatsApp.",
+  metadataBase: new URL(siteUrl),
+  title: { default: defaultTitle, template: `%s | ${site.name}` },
+  description: defaultDescription,
+  applicationName: site.name,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    siteName: site.name,
+    locale: "en_IN",
+    title: defaultTitle,
+    description: defaultDescription,
+    url: "/",
+  },
+  twitter: { card: "summary_large_image", title: defaultTitle, description: defaultDescription },
 };
 
 export const viewport: Viewport = {
@@ -47,13 +61,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="flex min-h-dvh flex-col">
         <a
           href="#main"
+          data-menu-inert
           className="sr-only rounded-md bg-espresso px-4 py-3 text-sm font-bold text-cream focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100]"
         >
           Skip to content
         </a>
+        <JsonLd data={buildBakeryJsonLd()} />
         <MotionProvider>
           <Navbar />
-          <main id="main" tabIndex={-1} className="flex-1 outline-none">
+          <main id="main" data-menu-inert tabIndex={-1} className="flex-1 outline-none">
             {children}
           </main>
           <Footer />

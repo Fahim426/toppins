@@ -20,6 +20,11 @@ export function LocationSection({ page = false }: { page?: boolean }) {
     { label: "Hours", value: getHoursWithDays() },
   ];
 
+  const socialLinks = [
+    { label: "Instagram", href: site.instagram },
+    { label: "Facebook", href: site.facebook },
+  ];
+
   // Badges only for services the owner has confirmed.
   const services = [
     site.takeaway.verified && site.takeaway.value && "Takeaway",
@@ -55,6 +60,25 @@ export function LocationSection({ page = false }: { page?: boolean }) {
                 </dd>
               </div>
             ))}
+            {page && (
+              <div className="grid grid-cols-[6.5rem_1fr] gap-4 py-3.5">
+                <dt className="type-label pt-1 text-espresso/70">Social</dt>
+                <dd className="flex flex-wrap gap-x-6 gap-y-1">
+                  {socialLinks.map((l) => (
+                    <a
+                      key={l.label}
+                      href={l.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline decoration-espresso/30 underline-offset-4 hover:decoration-espresso"
+                    >
+                      {l.label}
+                      <span className="sr-only"> (opens in a new tab)</span>
+                    </a>
+                  ))}
+                </dd>
+              </div>
+            )}
           </dl>
 
           {services.length > 0 && (

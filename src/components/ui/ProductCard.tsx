@@ -11,6 +11,8 @@ type Props = {
   width?: number;
   height?: number;
   sizes?: string;
+  /** Heading level for the item name; use h2 when the card sits directly under the page H1. */
+  headingAs?: "h2" | "h3";
 };
 
 export function ProductCard({
@@ -18,6 +20,7 @@ export function ProductCard({
   width = 1000,
   height = 1250,
   sizes = "(min-width: 1024px) 22vw, 45vw",
+  headingAs: Heading = "h3",
 }: Props) {
   const category = menuCategories.find((c) => c.id === item.category)?.label;
   const showSample = isDev && item.placeholder;
@@ -47,7 +50,7 @@ export function ProductCard({
 
       <div className="mt-4 flex flex-1 flex-col border-t border-espresso/20 pt-3">
         {category && <p className="type-label text-espresso/70">{category}</p>}
-        <h3 className="type-display-m mt-1.5 text-[1.375rem] lg:text-[1.5rem]">{item.name}</h3>
+        <Heading className="type-display-m mt-1.5 text-[1.375rem] lg:text-[1.5rem]">{item.name}</Heading>
         {item.description && (
           <p className="type-small mt-2 text-espresso/75">{item.description}</p>
         )}

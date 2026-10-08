@@ -20,7 +20,7 @@ Export as JPG (or WebP), sRGB, under ~400 KB where possible. No stock photos; us
 
 | File | Note |
 |---|---|
-${logoSpec.map((l) => `| \`public${l.path}\` | ${l.note} |`).join("\n")}
+${logoSpec.map((l) => `| \`${l.path}\` | ${l.note} |`).join("\n")}
 
 Once the logo arrives, the palette in \`src/app/globals.css\` is checked against it and adjusted if needed.
 

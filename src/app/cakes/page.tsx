@@ -9,12 +9,14 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { getVisibleCakeTypes } from "@/lib/cakes";
 import { cn } from "@/lib/cn";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Cakes | Toppins Bake & Cafe",
+export const metadata: Metadata = pageMetadata({
+  title: "Cakes",
   description:
     "Enquire about a cake at Toppins Bake & Cafe, Perumbadappu. Tell us the occasion, size, flavour and date on WhatsApp.",
-};
+  path: "/cakes",
+});
 
 export default function CakesPage() {
   const types = getVisibleCakeTypes();

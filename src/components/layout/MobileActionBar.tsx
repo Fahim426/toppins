@@ -30,6 +30,7 @@ export function MobileActionBar() {
   return (
     <nav
       aria-label="Quick actions"
+      data-menu-inert
       className="dark-surface fixed inset-x-0 bottom-0 z-40 border-t border-cream/15 bg-espresso pb-[env(safe-area-inset-bottom)] md:hidden"
     >
       <ul className="grid grid-cols-4">

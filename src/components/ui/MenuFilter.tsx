@@ -14,6 +14,8 @@ type Props = {
   limit?: number;
   /** Keep the selected category in the URL hash (/menu#pizza). Used on /menu only. */
   syncUrl?: boolean;
+  /** Heading level for item names (h2 on /menu where the H1 is the page title). */
+  headingAs?: "h2" | "h3";
 };
 
 const list: Variants = {
@@ -29,7 +31,7 @@ const card: Variants = {
  * Interactive category filter shared by Home and /menu.
  * Callers only pass categories that have visible items, so empty categories never render.
  */
-export function MenuFilter({ items, categories, limit, syncUrl = false }: Props) {
+export function MenuFilter({ items, categories, limit, syncUrl = false, headingAs }: Props) {
   const [localActive, setLocalActive] = useState<MenuCategory | "all">("all");
   const hash = useUrlHash();
 
@@ -50,7 +52,7 @@ export function MenuFilter({ items, categories, limit, syncUrl = false }: Props)
       <div
         role="group"
         aria-label="Filter menu by category"
-        className="-mx-5 flex gap-2 overflow-x-auto px-5 py-1 [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0 [&::-webkit-scrollbar]:hidden"
+        className="-mx-5 flex gap-2 overflow-x-auto px-5 py-2 [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0 [&::-webkit-scrollbar]:hidden"
       >
         {chips.map((chip) => {
           const pressed = active === chip.id;
@@ -64,7 +66,7 @@ export function MenuFilter({ items, categories, limit, syncUrl = false }: Props)
                 "min-h-11 shrink-0 rounded-md border px-4 text-sm font-semibold transition-colors duration-200",
                 pressed
                   ? "border-espresso bg-espresso text-cream"
-                  : "border-espresso/30 text-espresso hover:border-espresso",
+                  : "border-espresso/60 text-espresso hover:border-espresso",
               )}
             >
               {chip.label}
@@ -87,7 +89,7 @@ export function MenuFilter({ items, categories, limit, syncUrl = false }: Props)
       >
         {shown.map((item) => (
           <m.li key={item.id} variants={card}>
-            <ProductCard item={item} />
+            <ProductCard item={item} headingAs={headingAs} />
           </m.li>
         ))}
       </m.ul>

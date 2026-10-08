@@ -62,7 +62,7 @@ export function CakeEnquiry() {
                     "inline-flex size-6 shrink-0 items-center justify-center rounded-sm border transition-colors duration-200",
                     filled
                       ? "border-espresso bg-espresso text-cream"
-                      : "border-espresso/30 text-transparent",
+                      : "border-espresso/60 text-transparent",
                   )}
                 >
                   <Icon name="check" size={14} />
@@ -83,17 +83,18 @@ export function CakeEnquiry() {
                 onChange={(e) => update(f.key, e.target.value)}
                 aria-describedby={`${id}-hint`}
                 autoComplete="off"
-                className="min-h-12 w-full rounded-md border border-espresso/30 bg-warm-white px-4 text-base text-espresso transition-colors hover:border-espresso/60 focus:border-espresso"
+                className="min-h-12 w-full rounded-md border border-espresso/60 bg-warm-white px-4 text-base text-espresso transition-colors hover:border-espresso focus:border-espresso"
               />
             </li>
           );
         })}
       </ul>
 
-      <div className="flex flex-col">
-        <p className="type-label text-espresso/80">Your message</p>
+      <section aria-labelledby="cake-preview-label" className="flex flex-col">
+        <p id="cake-preview-label" className="type-label text-espresso/80">
+          Your message
+        </p>
         <pre
-          aria-label="Message preview"
           className="mt-3 flex-1 rounded-lg border border-espresso/15 bg-sand/60 p-5 font-sans text-[0.9375rem] leading-relaxed whitespace-pre-wrap text-espresso"
         >
           {message}
@@ -104,7 +105,7 @@ export function CakeEnquiry() {
         <p className="type-small mt-4 text-espresso/70">
           This opens WhatsApp with the message above. Nothing is stored on this site.
         </p>
-      </div>
+      </section>
     </form>
   );
 }

@@ -23,13 +23,19 @@ export function Hero() {
           className="h-full w-full rounded-none border-0"
         />
       </div>
-      {/* Scrim: keeps the header and headline legible over any photo */}
+      {/* Scrims: top band protects the header, bottom band protects the text block.
+          Opacity is chosen so cream text stays at 4.5:1 or better over photos up to ~75% brightness;
+          re-verify when the real hero photo is added. */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-gradient-to-t from-espresso/90 via-espresso/20 to-espresso/55"
+        className="absolute inset-x-0 top-0 -z-10 h-44 bg-gradient-to-b from-espresso/70 via-espresso/60 via-60% to-transparent"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 bottom-0 -z-10 h-[78%] bg-gradient-to-t from-espresso/90 via-espresso/70 via-55% to-transparent"
       />
 
-      <Container className="pb-8 lg:pb-12">
+      <Container className="pb-[calc(5.5rem+env(safe-area-inset-bottom))] md:pb-8 lg:pb-12">
         <p className="type-label animate-fade-up mb-6 text-butter" style={delay(0.1)}>
           Bake • Cafe • Good times
         </p>

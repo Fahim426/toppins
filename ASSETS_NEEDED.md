@@ -11,7 +11,8 @@ Export as JPG (or WebP), sRGB, under ~400 KB where possible. No stock photos; us
 |---|---|
 | `public/images/logo.svg` | Primary logo, SVG preferred (colour). |
 | `public/images/logo-light.svg` | Cream/white version for dark backgrounds. |
-| `public/images/icon.png` | Square mark, at least 512×512 px, for favicon and app icon. |
+| `public/images/icon.png` | Square mark, at least 512×512 px. Replaces the placeholder "T" favicon (src/app/icon.tsx, apple-icon.tsx). |
+| `src/app/opengraph-image.jpg` | Optional. 1200×630, keep key content in the centre 1000×500. Until supplied a generated brand card is used (src/app/opengraph-image.tsx); to use a photo add this file, delete the .tsx, and point lib/seo.ts at the new image. |
 
 Once the logo arrives, the palette in `src/app/globals.css` is checked against it and adjusted if needed.
 
@@ -41,7 +42,6 @@ Once the logo arrives, the palette in `src/app/globals.css` is checked against i
 | `gallery-8` | `public/images/gallery/gallery-08.jpg` | 4:5 | 1200×1500 | Home: Gallery | needed |  |
 | `gallery-9` | `public/images/gallery/gallery-09.jpg` | 4:3 | 1600×1200 | Home: Gallery | needed |  |
 | `gallery-10` | `public/images/gallery/gallery-10.jpg` | 3:4 | 1200×1600 | Home: Gallery | needed |  |
-| `og-image` | `public/images/og.jpg` | 1200:630 | 1200×630 | SEO: Open Graph / Twitter | needed | Logo or best food photo; keep key content inside the centre 1000×500. |
 
 ## Menu item photos
 

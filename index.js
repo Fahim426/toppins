@@ -244,6 +244,9 @@
         const active = btn.dataset.flavor === flavor;
         btn.classList.toggle('is-active', active);
         btn.setAttribute('aria-checked', String(active));
+        if (active && syncDropdown) {
+          btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        }
       });
 
       if (previewImg && flavorImageMap[flavor]) {

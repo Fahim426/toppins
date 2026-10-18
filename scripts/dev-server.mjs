@@ -47,6 +47,7 @@ const server = http.createServer((req, res) => {
     const ext = path.extname(filePath).toLowerCase();
     const contentType = MIME[ext] || 'application/octet-stream';
     res.setHeader('Content-Type', contentType);
+    res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
     fs.createReadStream(filePath).pipe(res);
   } catch (err) {
     res.statusCode = 500;

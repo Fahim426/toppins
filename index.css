@@ -735,14 +735,40 @@ p { margin: 0 0 1em; }
 }
 .field { display: flex; flex-direction: column; gap: 0.35rem; }
 .field--full { grid-column: 1 / -1; }
-.field label { font-family: var(--font-poppins); font-size: 0.85rem; font-weight: 600; color: var(--wheat-light); }
-.field label .opt { font-weight: 400; opacity: 0.75; font-size: 0.8rem; }
-.field input, .field select, .field textarea { font-family: var(--font-poppins); font-size: 0.92rem; padding: 0.75rem 1rem; border-radius: 12px; border: 1px solid rgba(214, 154, 76, 0.35); background: rgba(38, 17, 7, 0.6); color: #fff; transition: border-color 0.2s, background-color 0.2s; }
-.field select option { background: #261107; color: #fff; }
-.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--butter); outline: none; background: rgba(38, 17, 7, 0.85); }
+.field label { font-family: var(--font-poppins); font-size: 0.84rem; font-weight: 600; color: var(--wheat-light); }
+.field label .opt { font-weight: 400; opacity: 0.75; font-size: 0.78rem; }
+.field input, .field select, .field textarea {
+  font-family: var(--font-poppins);
+  font-size: 1rem; /* 16px prevents iOS Safari auto-zoom */
+  min-height: 48px; /* Accessible mobile touch target */
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(214, 154, 76, 0.35);
+  background: rgba(38, 17, 7, 0.6);
+  color: #fff;
+  transition: border-color 0.2s, background-color 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+.field select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23FFD100' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 16px 16px;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+.field select option { background: #261107; color: #fff; padding: 0.5rem; }
+.field input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.85) sepia(1) saturate(5) hue-rotate(350deg);
+  cursor: pointer;
+}
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--butter); outline: none; background: rgba(38, 17, 7, 0.85); box-shadow: 0 0 0 3px rgba(255, 209, 0, 0.15); }
 .field input.is-invalid, .field select.is-invalid { border-color: #FF5A5A; }
 .form__error { grid-column: 1 / -1; margin: 0; font-family: var(--font-poppins); color: #FF9B9B; font-size: 0.85rem; }
-.cake-studio-form button[type="submit"] { grid-column: 1 / -1; font-family: var(--font-poppins); font-weight: 600; font-size: 1rem; margin-top: 0.4rem; }
+.cake-studio-form button[type="submit"] { grid-column: 1 / -1; font-family: var(--font-poppins); font-weight: 600; font-size: 1rem; min-height: 50px; margin-top: 0.4rem; }
 
 
 /* ========================================================
@@ -1177,9 +1203,117 @@ p { margin: 0 0 1em; }
   .nav.is-open { transform: none; visibility: visible; }
   .nav a { padding: 0.9rem 0; border-bottom: 1px solid var(--line); font-size: 1rem; }
 }
+
+/* Custom Cake Studio Mobile Optimization */
+@media (max-width: 960px) {
+  .cake-studio {
+    padding-block: clamp(2.75rem, 6vw, 4rem);
+  }
+  .cake-studio-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .cake-canvas-wrap {
+    position: static;
+    padding: 1.25rem 1rem 1.15rem;
+    border-radius: 22px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+    background: rgba(255, 255, 255, 0.05);
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .cake-canvas-header {
+    margin-bottom: 0.75rem;
+  }
+  .cake-canvas-header span {
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+  }
+  .cake-canvas-header h3 {
+    font-size: 1.2rem;
+    margin-top: 0.15rem;
+  }
+  .cake-photo-frame {
+    max-width: 100%;
+    aspect-ratio: 16 / 10;
+    max-height: 250px;
+    border-radius: 18px;
+    box-shadow: 0 0 0 2px var(--butter),
+                0 0 0 5px var(--crimson),
+                0 16px 32px rgba(0, 0, 0, 0.45);
+  }
+  .cake-photo-badge {
+    top: 0.65rem;
+    right: 0.65rem;
+    font-size: 0.68rem;
+    padding: 0.25rem 0.65rem;
+  }
+  /* Horizontal scrollable touch-friendly flavour strip */
+  .cake-thumb-strip {
+    justify-content: flex-start;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    padding: 0.45rem 0.5rem;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  }
+  .cake-thumb-btn {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    padding: 0.2rem;
+    min-width: 58px;
+  }
+  .cake-thumb-img-wrap {
+    width: 48px;
+    height: 48px;
+  }
+  .cake-thumb-name {
+    font-size: 0.65rem;
+  }
+  /* Cake studio form on mobile: Clean single-column layout */
+  .cake-studio-form {
+    padding: 1.35rem 1.15rem 1.5rem;
+    border-radius: 22px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .cake-studio-form .form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.95rem;
+  }
+  .field {
+    width: 100%;
+  }
+  .field label {
+    font-size: 0.82rem;
+    margin-bottom: 0.15rem;
+  }
+  .field input, .field select, .field textarea {
+    font-size: 16px !important; /* Critical: prevents iOS auto-zoom */
+    min-height: 48px;
+    padding: 0.75rem 0.95rem;
+    border-radius: 12px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .cake-studio-form button[type="submit"] {
+    min-height: 52px;
+    font-size: 0.98rem;
+    border-radius: 14px;
+    margin-top: 0.4rem;
+    width: 100%;
+  }
+}
+
 @media (max-width: 600px) {
   .grid { grid-template-columns: 1fr; }
-  .cake-studio-form .form { grid-template-columns: 1fr; }
   .top-bar__status { font-size: 0.78rem; }
   .brand__sub { display: none; }
   .iconic-item { padding: 1.4rem; border-radius: 26px; }
@@ -1187,6 +1321,32 @@ p { margin: 0 0 1em; }
   .iconic-title { font-size: 1.6rem; }
   .iconic-desc { font-size: 0.96rem; line-height: 1.65; }
   .order-tray-pill { width: 92%; justify-content: space-between; }
+}
+
+@media (max-width: 480px) {
+  .cake-photo-frame {
+    aspect-ratio: 16 / 10.5;
+    max-height: 220px;
+    border-radius: 16px;
+  }
+  .cake-canvas-wrap,
+  .cake-studio-form {
+    padding: 1.15rem 0.95rem;
+    border-radius: 18px;
+  }
+  .cake-thumb-img-wrap {
+    width: 44px;
+    height: 44px;
+  }
+  .cake-thumb-btn {
+    min-width: 54px;
+  }
+  .cake-thumb-name {
+    font-size: 0.62rem;
+  }
+  .cake-studio-form .form {
+    gap: 0.8rem;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

@@ -480,7 +480,7 @@
           <!-- Left: Real Gourmet Photography Showcase -->
           <div class="cake-canvas-wrap">
             <div class="cake-canvas-header">
-              <span>★ Handcrafted by Toppins ★</span>
+              <span class="cake-canvas-tag">★ Handcrafted by Toppins ★</span>
               <h3 id="preview-cake-name">Decadent Chocolate Cake</h3>
             </div>
 
@@ -492,29 +492,30 @@
               </div>
             </div>
 
-            <!-- Visual Flavour Thumbnail Selector -->
+            <!-- Visual Flavour Selector (3x2 on mobile, clean row on desktop) -->
+            <p class="cake-picker-label">Step 1 · Tap to Select Flavour</p>
             <div class="cake-thumb-strip" id="cake-thumb-strip" role="radiogroup" aria-label="Select Cake Flavour">
-              <button type="button" class="cake-thumb-btn is-active" data-flavor="Decadent Chocolate Cake" aria-label="Decadent Chocolate Cake" title="Decadent Chocolate Cake">
+              <button type="button" class="cake-thumb-btn is-active" data-flavor="Decadent Chocolate Cake" aria-label="Decadent Chocolate Cake">
                 <span class="cake-thumb-img-wrap"><img src="images/chocolate-cake.jpeg" alt="Chocolate Cake" width="56" height="56" loading="lazy"></span>
                 <span class="cake-thumb-name">Chocolate</span>
               </button>
-              <button type="button" class="cake-thumb-btn" data-flavor="Lotus Biscoff Cheesecake" aria-label="Lotus Biscoff Cheesecake" title="Lotus Biscoff Cheesecake">
+              <button type="button" class="cake-thumb-btn" data-flavor="Lotus Biscoff Cheesecake" aria-label="Lotus Biscoff Cheesecake">
                 <span class="cake-thumb-img-wrap"><img src="images/lotus-cheese-cake.jpeg" alt="Lotus Cheesecake" width="56" height="56" loading="lazy"></span>
                 <span class="cake-thumb-name">Lotus</span>
               </button>
-              <button type="button" class="cake-thumb-btn" data-flavor="Signature Red Velvet" aria-label="Signature Red Velvet" title="Signature Red Velvet">
+              <button type="button" class="cake-thumb-btn" data-flavor="Signature Red Velvet" aria-label="Signature Red Velvet">
                 <span class="cake-thumb-img-wrap"><img src="images/red-velvet.jpeg" alt="Red Velvet" width="56" height="56" loading="lazy"></span>
                 <span class="cake-thumb-name">Red Velvet</span>
               </button>
-              <button type="button" class="cake-thumb-btn" data-flavor="Rich Ripe Mango" aria-label="Rich Ripe Mango" title="Rich Ripe Mango">
+              <button type="button" class="cake-thumb-btn" data-flavor="Rich Ripe Mango" aria-label="Rich Ripe Mango">
                 <span class="cake-thumb-img-wrap"><img src="images/mango-cake.jpg" alt="Rich Ripe Mango" width="56" height="56" loading="lazy"></span>
                 <span class="cake-thumb-name">Mango</span>
               </button>
-              <button type="button" class="cake-thumb-btn" data-flavor="Pistachio Tres Leches" aria-label="Pistachio Tres Leches" title="Pistachio Tres Leches">
+              <button type="button" class="cake-thumb-btn" data-flavor="Pistachio Tres Leches" aria-label="Pistachio Tres Leches">
                 <span class="cake-thumb-img-wrap"><img src="images/pistachio-tres-leches.jpg" alt="Pistachio Tres Leches" width="56" height="56" loading="lazy"></span>
                 <span class="cake-thumb-name">Pistachio</span>
               </button>
-              <button type="button" class="cake-thumb-btn" data-flavor="Celebration Theme / Wedding Cake" aria-label="Celebration & Wedding Theme Cake" title="Celebration & Wedding Theme Cake">
+              <button type="button" class="cake-thumb-btn" data-flavor="Celebration Theme / Wedding Cake" aria-label="Celebration & Wedding Theme Cake">
                 <span class="cake-thumb-img-wrap"><img src="images/celebration-cake.jpg" alt="Wedding Cake" width="56" height="56" loading="lazy"></span>
                 <span class="cake-thumb-name">Wedding</span>
               </button>
@@ -523,39 +524,35 @@
 
           <!-- Right: Customizer Form Controls -->
           <div class="cake-studio-form">
+            <div class="cake-form-header">
+              <span class="cake-canvas-tag">Step 2 · Customize & Order</span>
+              <div class="cake-selected-indicator">
+                <span>Selected Flavour:</span> <strong id="form-selected-flavor">Decadent Chocolate Cake</strong>
+              </div>
+            </div>
+
             <form class="form" id="cake-form" novalidate>
-              <div class="field">
-                <label for="cake-name">Your Name</label>
-                <input type="text" id="cake-name" name="name" autocomplete="name" placeholder="e.g. Rahul / Fatima" required>
-              </div>
+              <!-- Hidden select for flavor synchronization -->
+              <select id="cake-flavor" name="flavor" style="display: none;" required>
+                <option value="Decadent Chocolate Cake" selected>Decadent Chocolate Cake</option>
+                <option value="Lotus Biscoff Cheesecake">Lotus Biscoff Cheesecake</option>
+                <option value="Signature Red Velvet">Signature Red Velvet</option>
+                <option value="Rich Ripe Mango">Rich Ripe Mango</option>
+                <option value="Pistachio Tres Leches">Pistachio Tres Leches</option>
+                <option value="Celebration Theme / Wedding Cake">Celebration Theme / Wedding Cake</option>
+              </select>
 
-              <div class="field">
-                <label for="cake-occasion">Occasion</label>
-                <select id="cake-occasion" name="occasion" required>
-                  <option value="" disabled selected>Select occasion</option>
-                  <option value="Birthday">Birthday</option>
-                  <option value="Wedding / Nikkah">Wedding / Nikkah</option>
-                  <option value="Anniversary">Anniversary</option>
-                  <option value="Graduation">Graduation</option>
-                  <option value="Celebration">Other Event</option>
-                </select>
-              </div>
-
-              <div class="field">
-                <label for="cake-flavor">Flavour Theme</label>
-                <select id="cake-flavor" name="flavor" required>
-                  <option value="Decadent Chocolate Cake" selected>Decadent Chocolate Cake</option>
-                  <option value="Lotus Biscoff Cheesecake">Lotus Biscoff Cheesecake</option>
-                  <option value="Signature Red Velvet">Signature Red Velvet</option>
-                  <option value="Rich Ripe Mango">Rich Ripe Mango</option>
-                  <option value="Pistachio Tres Leches">Pistachio Tres Leches</option>
-                  <option value="Celebration Theme / Wedding Cake">Celebration Theme / Wedding Cake</option>
-                </select>
-              </div>
-
-              <div class="field">
-                <label for="cake-weight">Weight (Tiers)</label>
-                <select id="cake-weight" name="weight" required>
+              <!-- Weight Pill Selector -->
+              <div class="field field--full">
+                <label>Select Weight / Size</label>
+                <div class="pill-group" id="weight-pill-group" role="radiogroup" aria-label="Select Weight">
+                  <button type="button" class="pill-opt is-active" data-val="1 kg">1 kg (1 Tier)</button>
+                  <button type="button" class="pill-opt" data-val="1.5 kg">1.5 kg</button>
+                  <button type="button" class="pill-opt" data-val="2 kg">2 kg (2 Tiers)</button>
+                  <button type="button" class="pill-opt" data-val="3 kg">3 kg</button>
+                  <button type="button" class="pill-opt" data-val="5 kg">5 kg (Grand)</button>
+                </div>
+                <select id="cake-weight" name="weight" style="display: none;" required>
                   <option value="1 kg" selected>1 kg (1 Tier)</option>
                   <option value="1.5 kg">1.5 kg (1 Tier)</option>
                   <option value="2 kg">2 kg (2 Tiers - Grand)</option>
@@ -565,9 +562,32 @@
                 </select>
               </div>
 
+              <!-- Occasion Pill Selector -->
               <div class="field field--full">
-                <label for="cake-message">Message On Cake <span class="opt">(Custom icing inscription)</span></label>
+                <label>Occasion</label>
+                <div class="pill-group" id="occasion-pill-group" role="radiogroup" aria-label="Select Occasion">
+                  <button type="button" class="pill-opt is-active" data-val="Birthday">🎂 Birthday</button>
+                  <button type="button" class="pill-opt" data-val="Wedding / Nikkah">💍 Wedding / Nikkah</button>
+                  <button type="button" class="pill-opt" data-val="Anniversary">❤️ Anniversary</button>
+                  <button type="button" class="pill-opt" data-val="Celebration">🎉 Celebration</button>
+                </div>
+                <select id="cake-occasion" name="occasion" style="display: none;" required>
+                  <option value="Birthday" selected>Birthday</option>
+                  <option value="Wedding / Nikkah">Wedding / Nikkah</option>
+                  <option value="Anniversary">Anniversary</option>
+                  <option value="Graduation">Graduation</option>
+                  <option value="Celebration">Other Event</option>
+                </select>
+              </div>
+
+              <div class="field field--full">
+                <label for="cake-message">Message On Cake <span class="opt">(Piped icing inscription)</span></label>
                 <input type="text" id="cake-message" name="message" placeholder="e.g. Happy Birthday Fatima! 🎂" maxlength="32">
+              </div>
+
+              <div class="field">
+                <label for="cake-name">Your Name</label>
+                <input type="text" id="cake-name" name="name" autocomplete="name" placeholder="e.g. Rahul / Fatima" required>
               </div>
 
               <div class="field">
@@ -575,9 +595,9 @@
                 <input type="date" id="cake-date" name="date" required>
               </div>
 
-              <div class="field">
-                <label for="cake-notes">Theme / Decor <span class="opt">(optional)</span></label>
-                <input type="text" id="cake-notes" name="notes" placeholder="Colours, characters, topper brief">
+              <div class="field field--full">
+                <label for="cake-notes">Theme / Decor Brief <span class="opt">(optional)</span></label>
+                <input type="text" id="cake-notes" name="notes" placeholder="Colours, characters, topper details...">
               </div>
 
               <p class="form__error" id="form-error" role="alert" hidden>Please fill in all required fields.</p>

@@ -238,15 +238,14 @@
         flavorSelect.value = flavor;
       }
       if (previewTitle) previewTitle.textContent = flavor;
+      const formFlavor = $('#form-selected-flavor');
+      if (formFlavor) formFlavor.textContent = flavor;
 
       // Update active thumbnail
       thumbButtons.forEach(btn => {
         const active = btn.dataset.flavor === flavor;
         btn.classList.toggle('is-active', active);
         btn.setAttribute('aria-checked', String(active));
-        if (active && syncDropdown) {
-          btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-        }
       });
 
       if (previewImg && flavorImageMap[flavor]) {
@@ -266,6 +265,42 @@
       btn.addEventListener('click', () => {
         const f = btn.dataset.flavor;
         if (f) setFlavor(f, true);
+      });
+    });
+
+    // 1-Tap Weight pill selection
+    const weightPills = $$('#weight-pill-group .pill-opt');
+    const weightSelect = $('#cake-weight');
+    weightPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        weightPills.forEach(p => {
+          p.classList.remove('is-active');
+          p.setAttribute('aria-checked', 'false');
+        });
+        pill.classList.add('is-active');
+        pill.setAttribute('aria-checked', 'true');
+        if (weightSelect) {
+          weightSelect.value = pill.dataset.val;
+          weightSelect.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+      });
+    });
+
+    // 1-Tap Occasion pill selection
+    const occasionPills = $$('#occasion-pill-group .pill-opt');
+    const occasionSelect = $('#cake-occasion');
+    occasionPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        occasionPills.forEach(p => {
+          p.classList.remove('is-active');
+          p.setAttribute('aria-checked', 'false');
+        });
+        pill.classList.add('is-active');
+        pill.setAttribute('aria-checked', 'true');
+        if (occasionSelect) {
+          occasionSelect.value = pill.dataset.val;
+          occasionSelect.dispatchEvent(new Event('change', { bubbles: true }));
+        }
       });
     });
 

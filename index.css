@@ -581,19 +581,37 @@ p { margin: 0 0 1em; }
   text-align: center;
   margin-bottom: 1.2rem;
 }
-.cake-canvas-header span {
+.cake-canvas-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   font-family: var(--font-poppins);
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--butter);
+  background: rgba(255, 209, 0, 0.12);
+  border: 1px solid rgba(255, 209, 0, 0.35);
+  padding: 0.35rem 0.95rem;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 .cake-canvas-header h3 {
   font-family: var(--font-poppins);
   font-size: 1.35rem;
   color: #fff;
-  margin: 0.2rem 0 0;
+  margin: 0.5rem 0 0;
+}
+.cake-picker-label {
+  font-family: var(--font-poppins);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--wheat);
+  margin: 1.2rem 0 0.35rem;
+  text-align: center;
 }
 
 /* Real Photo Frame */
@@ -723,6 +741,76 @@ p { margin: 0 0 1em; }
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 20px 48px rgba(0, 0, 0, 0.4);
+}
+
+.cake-form-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin-bottom: 1.4rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid rgba(214, 154, 76, 0.22);
+}
+.cake-selected-indicator {
+  font-family: var(--font-poppins);
+  font-size: 0.94rem;
+  color: var(--wheat-light);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.cake-selected-indicator strong {
+  color: #fff;
+  background: rgba(217, 35, 42, 0.35);
+  border: 1.5px solid var(--crimson);
+  padding: 0.25rem 0.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Pill Option Selectors */
+.pill-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.35rem;
+}
+.pill-opt {
+  background: rgba(38, 17, 7, 0.75);
+  border: 1.5px solid rgba(214, 154, 76, 0.35);
+  color: var(--wheat-light);
+  font-family: var(--font-poppins);
+  font-size: 0.84rem;
+  font-weight: 500;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  -webkit-tap-highlight-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+}
+.pill-opt:hover {
+  border-color: var(--butter);
+  color: #fff;
+  background: rgba(61, 30, 16, 0.95);
+  transform: translateY(-1px);
+}
+.pill-opt:active {
+  transform: scale(0.96);
+}
+.pill-opt.is-active {
+  background: linear-gradient(135deg, var(--crimson) 0%, var(--crimson-dark) 100%);
+  border-color: var(--butter);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(217, 35, 42, 0.4), 0 0 0 1px var(--butter);
+  transform: translateY(-1px);
 }
 
 .cake-studio-form .form {
@@ -1185,7 +1273,8 @@ p { margin: 0 0 1em; }
   .grid { grid-template-columns: repeat(2, 1fr); }
   .reviews { grid-template-columns: 1fr; }
   .hero__grid, .about, .visit { grid-template-columns: 1fr; }
-  .about__media img { max-width: 380px; }
+  .about__media { max-width: 480px; margin-inline: auto; width: 100%; aspect-ratio: 4 / 3; }
+  .about__media img { width: 100%; height: 100%; object-fit: cover; }
   .iconic-item, .iconic-item--reverse { grid-template-columns: 1fr; }
   .iconic-item--reverse .iconic-frame { order: 0; }
   .iconic-item--reverse .iconic-content { order: 1; }
@@ -1211,77 +1300,101 @@ p { margin: 0 0 1em; }
   }
   .cake-studio-grid {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    gap: 1.5rem;
   }
   .cake-canvas-wrap {
     position: static;
-    padding: 1.25rem 1rem 1.15rem;
-    border-radius: 22px;
+    padding: 1.4rem 1.15rem 1.35rem;
+    border-radius: 26px;
     box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
     background: rgba(255, 255, 255, 0.05);
     width: 100%;
     box-sizing: border-box;
   }
   .cake-canvas-header {
-    margin-bottom: 0.75rem;
-  }
-  .cake-canvas-header span {
-    font-size: 0.68rem;
-    letter-spacing: 0.16em;
+    margin-bottom: 0.85rem;
   }
   .cake-canvas-header h3 {
-    font-size: 1.2rem;
-    margin-top: 0.15rem;
+    font-size: 1.25rem;
+    margin-top: 0.35rem;
   }
   .cake-photo-frame {
-    max-width: 100%;
-    aspect-ratio: 16 / 10;
-    max-height: 250px;
-    border-radius: 18px;
-    box-shadow: 0 0 0 2px var(--butter),
-                0 0 0 5px var(--crimson),
-                0 16px 32px rgba(0, 0, 0, 0.45);
+    width: 100%;
+    max-width: 330px;
+    aspect-ratio: 1 / 1;
+    max-height: none;
+    margin-inline: auto;
+    border-radius: 24px;
+    box-shadow: 0 0 0 2.5px var(--butter),
+                0 0 0 6px var(--crimson),
+                0 20px 42px rgba(0, 0, 0, 0.55);
   }
   .cake-photo-badge {
-    top: 0.65rem;
-    right: 0.65rem;
-    font-size: 0.68rem;
-    padding: 0.25rem 0.65rem;
+    top: 0.75rem;
+    right: 0.75rem;
+    font-size: 0.7rem;
+    padding: 0.28rem 0.7rem;
   }
-  /* Horizontal scrollable touch-friendly flavour strip */
+  .cake-picker-label {
+    margin: 1.15rem 0 0.5rem;
+    font-size: 0.76rem;
+  }
+  /* Centered, balanced 3x2 touch-friendly flavour grid */
   .cake-thumb-strip {
-    justify-content: flex-start;
-    gap: 0.75rem;
-    margin-top: 1rem;
-    padding: 0.45rem 0.5rem;
-    scroll-snap-type: x mandatory;
-    scroll-padding-left: 0.5rem;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-x: contain;
-    mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.85rem 0.5rem;
+    max-width: 360px;
+    margin: 0.85rem auto 0;
+    padding: 0.25rem 0.1rem;
+    overflow-x: visible;
+    mask-image: none;
+    -webkit-mask-image: none;
   }
   .cake-thumb-btn {
-    flex: 0 0 auto;
-    scroll-snap-align: center;
-    padding: 0.2rem;
-    min-width: 58px;
+    min-width: 0;
+    width: 100%;
+    padding: 0.35rem 0.15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
   }
   .cake-thumb-img-wrap {
-    width: 48px;
-    height: 48px;
+    width: 54px;
+    height: 54px;
   }
   .cake-thumb-name {
-    font-size: 0.65rem;
+    font-size: 0.72rem;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.25;
   }
-  /* Cake studio form on mobile: Clean single-column layout */
+  /* Cake studio form on mobile: Clean single-column layout with 1-tap pills */
   .cake-studio-form {
-    padding: 1.35rem 1.15rem 1.5rem;
-    border-radius: 22px;
+    padding: 1.4rem 1.15rem 1.6rem;
+    border-radius: 26px;
     box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
     background: rgba(255, 255, 255, 0.05);
     width: 100%;
     box-sizing: border-box;
+  }
+  .cake-form-header {
+    margin-bottom: 1.1rem;
+    padding-bottom: 0.9rem;
+  }
+  .cake-selected-indicator {
+    font-size: 0.88rem;
+  }
+  .pill-group {
+    gap: 0.45rem;
+  }
+  .pill-opt {
+    font-size: 0.8rem;
+    padding: 0.45rem 0.75rem;
+    min-height: 40px;
+    flex: 1 1 calc(50% - 0.45rem);
+    text-align: center;
   }
   .cake-studio-form .form {
     display: flex;
@@ -1293,7 +1406,7 @@ p { margin: 0 0 1em; }
   }
   .field label {
     font-size: 0.82rem;
-    margin-bottom: 0.15rem;
+    margin-bottom: 0.2rem;
   }
   .field input, .field select, .field textarea {
     font-size: 16px !important; /* Critical: prevents iOS auto-zoom */
@@ -1325,27 +1438,30 @@ p { margin: 0 0 1em; }
 
 @media (max-width: 480px) {
   .cake-photo-frame {
-    aspect-ratio: 16 / 10.5;
-    max-height: 220px;
-    border-radius: 16px;
+    max-width: 280px;
+    aspect-ratio: 1 / 1;
+    max-height: none;
+    border-radius: 20px;
   }
   .cake-canvas-wrap,
   .cake-studio-form {
-    padding: 1.15rem 0.95rem;
-    border-radius: 18px;
+    padding: 1.15rem 0.9rem;
+    border-radius: 20px;
   }
   .cake-thumb-img-wrap {
-    width: 44px;
-    height: 44px;
-  }
-  .cake-thumb-btn {
-    min-width: 54px;
+    width: 48px;
+    height: 48px;
   }
   .cake-thumb-name {
-    font-size: 0.62rem;
+    font-size: 0.68rem;
+  }
+  .pill-opt {
+    font-size: 0.76rem;
+    padding: 0.4rem 0.6rem;
+    min-height: 38px;
   }
   .cake-studio-form .form {
-    gap: 0.8rem;
+    gap: 0.85rem;
   }
 }
 @media (prefers-reduced-motion: reduce) {

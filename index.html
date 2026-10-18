@@ -28,8 +28,7 @@
   <meta name="twitter:image" content="images/brand/og-image.jpg">
 
   <link rel="preload" href="fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="index.css?v=20261018d">
+  <link rel="stylesheet" href="index.css?v=20261018e">
 
   <script type="application/ld+json">
   {
@@ -560,22 +559,21 @@
                 </select>
               </div>
 
-              <!-- Occasion Pill Selector -->
+              <!-- Manual Occasion Input -->
               <div class="field field--full">
-                <label>Occasion</label>
-                <div class="pill-group" id="occasion-pill-group" role="radiogroup" aria-label="Select Occasion">
-                  <button type="button" class="pill-opt is-active" data-val="Birthday">🎂 Birthday</button>
-                  <button type="button" class="pill-opt" data-val="Wedding / Nikkah">💍 Wedding / Nikkah</button>
-                  <button type="button" class="pill-opt" data-val="Anniversary">❤️ Anniversary</button>
-                  <button type="button" class="pill-opt" data-val="Celebration">🎉 Celebration</button>
-                </div>
-                <select id="cake-occasion" name="occasion" style="display: none;" required>
-                  <option value="Birthday" selected>Birthday</option>
-                  <option value="Wedding / Nikkah">Wedding / Nikkah</option>
-                  <option value="Anniversary">Anniversary</option>
-                  <option value="Graduation">Graduation</option>
-                  <option value="Celebration">Other Event</option>
-                </select>
+                <label for="cake-occasion">Occasion</label>
+                <input type="text" id="cake-occasion" name="occasion" list="occasion-suggestions" placeholder="e.g. Birthday, Wedding, Anniversary, Baby Shower..." required>
+                <datalist id="occasion-suggestions">
+                  <option value="Birthday">
+                  <option value="Wedding / Nikkah">
+                  <option value="Anniversary">
+                  <option value="Baby Shower">
+                  <option value="Engagement">
+                  <option value="Graduation">
+                  <option value="Housewarming">
+                  <option value="Farewell">
+                  <option value="Celebration">
+                </datalist>
               </div>
 
               <div class="field field--full">
@@ -815,6 +813,6 @@
     </a>
   </nav>
 
-  <script src="index.js?v=20261018d" defer></script>
+  <script src="index.js?v=20261018e" defer></script>
 </body>
 </html>

@@ -286,23 +286,7 @@
       });
     });
 
-    // 1-Tap Occasion pill selection
-    const occasionPills = $$('#occasion-pill-group .pill-opt');
-    const occasionSelect = $('#cake-occasion');
-    occasionPills.forEach(pill => {
-      pill.addEventListener('click', () => {
-        occasionPills.forEach(p => {
-          p.classList.remove('is-active');
-          p.setAttribute('aria-checked', 'false');
-        });
-        pill.classList.add('is-active');
-        pill.setAttribute('aria-checked', 'true');
-        if (occasionSelect) {
-          occasionSelect.value = pill.dataset.val;
-          occasionSelect.dispatchEvent(new Event('change', { bubbles: true }));
-        }
-      });
-    });
+
 
 
     // Date picker minimum date (today)

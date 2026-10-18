@@ -1,0 +1,14 @@
+{
+  "name": "Toppins Bake and Cafe",
+  "short_name": "Toppins",
+  "description": "Bakery and cafe in Perumbadappu, Kerala. Cakes, puffs, shakes and custom orders.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDFBF7",
+  "theme_color": "#3D1E10",
+  "icons": [
+    { "src": "images/brand/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "images/brand/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "images/brand/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

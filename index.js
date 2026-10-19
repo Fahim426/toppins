@@ -14,7 +14,7 @@
   function initStatus() {
     const dot = $('#status-dot') || $('.status-indicator');
     const text = $('#status-text');
-    if (!dot || !text) return;
+    if (!text) return;
 
     function update() {
       let minutes = 720;
@@ -35,7 +35,7 @@
 
       // 09:00 is 540 min, 21:30 is 1290 min
       const open = minutes >= 540 && minutes < 1290;
-      dot.classList.toggle('is-closed', !open);
+      if (dot) dot.classList.toggle('is-closed', !open);
       text.textContent = open
         ? 'Open now until 9:30 PM'
         : 'Closed now. Opens daily at 9:00 AM';

@@ -549,59 +549,7 @@
   }
 
   /* --------------------------------------------------------------------------
-     7. Contact Form Handler (Contact Page)
-     -------------------------------------------------------------------------- */
-  function initContactForm() {
-    const form = $('#contact-form');
-    if (!form) return;
-
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      const required = $$('input[required], textarea[required]', form);
-      let valid = true;
-
-      required.forEach(f => {
-        const bad = !f.value.trim();
-        f.classList.toggle('is-invalid', bad);
-        if (bad) valid = false;
-      });
-
-      const error = $('#contact-error');
-      if (error) error.hidden = valid;
-
-      if (!valid) return;
-
-      const name = ($('#contact-name') || {}).value || '';
-      const phone = ($('#contact-phone') || {}).value || '';
-      const service = ($('#contact-service') || {}).value || 'General Inquiry';
-      const msg = ($('#contact-message') || {}).value || '';
-
-      const lines = [
-        '*WEBSITE MESSAGE - TOPPINS BAKE & CAFE*',
-        '---------------------------------------',
-        `• Name: ${name}`,
-        `• Phone: ${phone}`,
-        `• Subject: ${service}`,
-        `• Message: ${msg}`,
-        '',
-        'Sent via Toppins website contact form.'
-      ];
-
-      const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`;
-      const w = window.open(url, '_blank', 'noopener');
-      if (!w) window.location.href = url;
-
-      const success = $('#contact-success');
-      if (success) {
-        success.hidden = false;
-        form.reset();
-        setTimeout(() => { success.hidden = true; }, 5000);
-      }
-    });
-  }
-
-  /* --------------------------------------------------------------------------
-     8. Card 3D Tilt (Gated by Pointer and Reduced Motion)
+     7. Card 3D Tilt (Gated by Pointer and Reduced Motion)
      -------------------------------------------------------------------------- */
   function initCardTilt() {
     if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches ||
@@ -631,6 +579,5 @@
   initFilters();
   initCakeStudio();
   initGalleryLightbox();
-  initContactForm();
   initCardTilt();
 })();

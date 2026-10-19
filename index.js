@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const WA_NUMBER = '919995095100';
+  const WA_NUMBER = '917558995100';
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
 
@@ -464,6 +464,7 @@
           '------------------------------------------------',
           `• Name: ${v('cake-name')}`,
           `• Phone: ${v('cake-phone') || 'Included in WhatsApp'}`,
+          `• Preferred Pickup: ${v('cake-outlet') || 'Althara (Punnayoorkulam)'}`,
           `• Occasion: ${v('cake-occasion')}`,
           `• Flavour: ${v('cake-flavor') || (flavorSelect ? flavorSelect.value : 'Chef Special')}`,
           `• Weight/Size: ${v('cake-weight') || '1 kg'}`,
@@ -572,6 +573,36 @@
     });
   }
 
+  /* --------------------------------------------------------------------------
+     8. Dual-Outlet Interactive Map Switcher
+     -------------------------------------------------------------------------- */
+  function initMapOutletSwitcher() {
+    const btns = $$('.map-tab-btn');
+    const iframe = $('#contact-map-iframe');
+    const titleEl = $('#map-active-title');
+    const linkEl = $('#map-active-link');
+    if (!btns.length || !iframe) return;
+
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btns.forEach(b => {
+          b.classList.remove('is-active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('is-active');
+        btn.setAttribute('aria-selected', 'true');
+
+        const src = btn.getAttribute('data-map-src');
+        const dir = btn.getAttribute('data-dir-link');
+        const outletName = btn.getAttribute('data-outlet-name');
+
+        if (src) iframe.src = src;
+        if (dir && linkEl) linkEl.href = dir;
+        if (outletName && titleEl) titleEl.textContent = `Currently Viewing: ${outletName}`;
+      });
+    });
+  }
+
   // Self-initialization
   initStatus();
   initNav();
@@ -580,4 +611,5 @@
   initCakeStudio();
   initGalleryLightbox();
   initCardTilt();
+  initMapOutletSwitcher();
 })();

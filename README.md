@@ -21,7 +21,7 @@ An editorial, responsive web experience for **Toppins Bake and Cafe (Toppins Bak
 
 - **Floating Order Tray (Multi-Item WhatsApp Commerce Drawer):**
   - Aggregates bakery selections across pages into a unified slide-up drawer.
-  - Dynamic quantity counters, badge bumps, and single-tap checkout generating structured plain-text orders to `+91 99950 95100`.
+  - Dynamic quantity counters, badge bumps, and single-tap checkout generating structured plain-text orders to `+91 75589 95100`.
 
 - **Mobile Quick Action Dock:**
   - Fixed luxury bottom navigation bar on mobile viewports (< 768px) with one-tap access to **Call**, **Directions**, **Cakes**, **Order Tray**, and **WhatsApp Chat**.
@@ -56,9 +56,14 @@ An editorial, responsive web experience for **Toppins Bake and Cafe (Toppins Bak
 
 ---
 
-## Visit Toppins Bake and Cafe
+## Visit Toppins Outlets
 
-- **Address:** Near Puthanpally Central Madrassa, Guruvayur-Althara-Ponnani Road, Perumbadappu, Kerala 679580
-- **Phone:** [+91 99950 95100](tel:+919995095100)
-- **WhatsApp:** [+91 99950 95100](https://wa.me/919995095100)
+- **Outlet 1: Toppins Bakers · Althara (Primary Order & Hotline Desk)**
+  - Address: Near CSB Bank, Thadakam Township, Althara – Punnayoorkulam, Kadikkad, Kerala 679561
+  - Google Maps: [Althara Directions](https://maps.app.goo.gl/qe7Fa1P3nk8NEmpK7?g_st=iw)
+- **Outlet 2: Toppins Bake and Cafe · Perumbadappu (Bake & Cafe)**
+  - Address: Near Puthanpally Central Madrassa, Guruvayur–Althara–Ponnani Road, Perumbadappu, Kerala 679580
+  - Google Maps: [Perumbadappu Directions](https://www.google.com/maps/search/?api=1&query=PX2M%2BH4C%20Perumbadappu%20Kerala)
+- **Central Phone Hotline:** [+91 75589 95100](tel:+917558995100)
+- **WhatsApp Direct Order:** [+91 75589 95100](https://wa.me/917558995100)
 - **Hours:** 09:00 AM – 09:30 PM IST, Open 7 Days a Week

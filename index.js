@@ -345,6 +345,11 @@
         if (emptyMsg) {
           emptyMsg.hidden = count > 0;
         }
+
+        const productGrid = $('#menu-product-grid');
+        if (productGrid) {
+          productGrid.scrollTo({ left: 0, behavior: 'smooth' });
+        }
       });
     });
   }

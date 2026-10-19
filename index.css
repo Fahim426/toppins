@@ -708,6 +708,10 @@ p:last-child { margin-bottom: 0; }
   box-shadow: 0 4px 12px rgba(217, 35, 42, 0.3);
 }
 
+.menu-scroll-cue {
+  display: none;
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1731,8 +1735,77 @@ p:last-child { margin-bottom: 0; }
   .cafe-experience__grid { grid-template-columns: 1fr; }
   .cafe-experience__media { min-height: 260px; }
 
-  /* Menu Cards Mobile */
-  .product-grid { grid-template-columns: 1fr; gap: 1.4rem; }
+  /* Specialties Mobile (Bigger Image Ratio as requested) */
+  .specialties-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
+  }
+  .specialty-card__media {
+    aspect-ratio: 1 / 1;
+    min-height: 150px;
+  }
+  .specialty-card__body {
+    padding: 1rem 0.85rem;
+  }
+  .specialty-card__title {
+    font-size: 1.15rem;
+  }
+  .specialty-card__desc {
+    font-size: 0.82rem;
+    line-height: 1.45;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Menu Cards Mobile - Horizontal Carousel / Scroll from Left to Right */
+  .menu-scroll-cue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-weight: 500;
+    margin-top: -1.8rem;
+    margin-bottom: 1.4rem;
+    letter-spacing: 0.04em;
+  }
+  .product-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1.1rem;
+    padding-bottom: 1.6rem;
+    padding-top: 0.4rem;
+    padding-left: 0.25rem;
+    padding-right: 1.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--wheat) rgba(214, 154, 76, 0.12);
+  }
+  .product-grid::-webkit-scrollbar {
+    height: 5px;
+  }
+  .product-grid::-webkit-scrollbar-track {
+    background: rgba(214, 154, 76, 0.1);
+    border-radius: 999px;
+  }
+  .product-grid::-webkit-scrollbar-thumb {
+    background: var(--wheat);
+    border-radius: 999px;
+  }
+  .product-card {
+    flex: 0 0 280px;
+    width: 280px;
+    max-width: 82vw;
+    min-width: 260px;
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+  }
+  .product-card__media {
+    aspect-ratio: 16 / 11;
+  }
 
   .container {
     width: min(100% - 1.5rem, 1200px);

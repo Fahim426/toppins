@@ -66,4 +66,7 @@ An editorial, responsive web experience for **Toppins Bake and Cafe (Toppins Bak
   - Google Maps: [Perumbadappu Directions](https://www.google.com/maps/search/?api=1&query=PX2M%2BH4C%20Perumbadappu%20Kerala)
 - **Central Phone Hotline:** [+91 75589 95100](tel:+917558995100)
 - **WhatsApp Direct Order:** [+91 75589 95100](https://wa.me/917558995100)
+- **Email:** [toppinsalthara@gmail.com](mailto:toppinsalthara@gmail.com)
+- **Instagram:** [@toppins_bakeandcafe](https://www.instagram.com/toppins_bakeandcafe?psln=MmppMWszaXZkbmd0)
+- **Facebook:** [Toppins on Facebook](https://www.facebook.com/share/19awHUj3Rr/?mibextid=wwXIfr)
 - **Hours:** 09:00 AM – 09:30 PM IST, Open 7 Days a Week

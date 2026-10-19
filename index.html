@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toppins Bake and Cafe | Iconic Bakery & Cafe in Perumbadappu, Kerala</title>
-  <meta name="description" content="Toppins Bake and Cafe in Perumbadappu, Malappuram. Taste our iconic Chocolate Cake, Lotus Biscoff Cheesecake, Red Velvet, hot Kerala Egg Puffs, and Salankatiya. Custom Celebration Cakes & WhatsApp Ordering.">
+  <title>Toppins Bake and Cafe | Artisanal Bakery & Cafe in Perumbadappu, Kerala</title>
+  <meta name="description" content="Toppins Bake and Cafe in Perumbadappu, Kerala. Taste our artisanal celebration cakes, Lotus Biscoff cheesecake, fresh egg puffs, traditional Salankatiya and specialty shakes. Order on WhatsApp: +91 99950 95100.">
   <link rel="canonical" href="https://toppinsbakes.in/">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#3D1E10">
+  <meta name="theme-color" content="#261107">
+
+  <!-- Favicons -->
   <link rel="icon" href="favicon.ico" sizes="48x48">
   <link rel="icon" href="images/brand/logo.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <meta property="og:title" content="Toppins Bake and Cafe | Iconic Bakery in Perumbadappu">
-  <meta property="og:description" content="Indulge in our iconic Chocolate Cake, Lotus Cheesecake, Red Velvet, hot Egg Puffs and Salankatiya. Order on WhatsApp!">
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Toppins Bake and Cafe | Crafted with Care, For Every Celebration">
+  <meta property="og:description" content="Artisanal cakes, fresh bakes and delicious café treats in Perumbadappu, Kerala. Explore our signature cakes and direct WhatsApp ordering.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Toppins Bake and Cafe">
   <meta property="og:url" content="https://toppinsbakes.in/">
@@ -21,15 +25,15 @@
   <meta property="og:image" content="images/brand/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Toppins Bake and Cafe - Artisanal Bakery in Perumbadappu">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Toppins Bake and Cafe | Iconic Bakery in Perumbadappu">
-  <meta name="twitter:description" content="Indulge in our iconic Chocolate Cake, Lotus Cheesecake, Red Velvet, hot Egg Puffs and Salankatiya.">
-  <meta name="twitter:image" content="images/brand/og-image.jpg">
+  <meta property="og:image:alt" content="Toppins Bake and Cafe Signature Cake Showcase">
 
-  <link rel="preload" href="fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="index.css?v=20261018e">
+  <!-- Preload Critical Typography -->
+  <link rel="preload" href="fonts/playfair-display-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/plus-jakarta-sans-600.woff2" as="font" type="font/woff2" crossorigin>
 
+  <link rel="stylesheet" href="index.css">
+
+  <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -38,7 +42,7 @@
     "alternateName": "Toppins Bakers",
     "@id": "https://toppinsbakes.in/#business",
     "url": "https://toppinsbakes.in/",
-    "logo": "https://toppinsbakes.in/images/brand/icon-512.png",
+    "logo": "https://toppinsbakes.in/images/brand/logo.svg",
     "image": "https://toppinsbakes.in/images/brand/og-image.jpg",
     "address": {
       "@type": "PostalAddress",
@@ -50,573 +54,685 @@
     },
     "telephone": "+919995095100",
     "email": "toppinsbakes@gmail.com",
-    "sameAs": [
-      "https://www.instagram.com/toppins.bakeandcafe",
-      "https://www.facebook.com/toppinsbakes/"
-    ],
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
       "opens": "09:00",
       "closes": "21:30"
     },
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.1", "reviewCount": "85" },
-    "priceRange": "₹",
-    "servesCuisine": ["Bakery", "Cafe", "Desserts", "Pastries"]
+    "priceRange": "INR",
+    "servesCuisine": ["Bakery", "Patisserie", "Cafe", "Desserts"]
   }
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <!-- Scroll Progress Indicator -->
-  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <!-- Top Status Bar -->
-  <div class="top-bar">
+  <aside class="top-bar" aria-label="Store status and telephone">
     <div class="container top-bar__inner">
-      <span class="top-bar__status"><span class="status-dot" id="status-dot"></span><span id="status-text">Open daily, 9:00 AM to 9:30 PM</span></span>
-      <a href="tel:+919995095100">+91 99950 95100</a>
+      <div class="top-bar__status">
+        <span class="status-indicator" id="status-dot"></span>
+        <span id="status-text">Open daily, 9:00 AM to 9:30 PM IST</span>
+      </div>
+      <a class="top-bar__phone" href="tel:+919995095100" aria-label="Call bakery directly at +91 99950 95100">
+        <svg class="svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>+91 99950 95100</span>
+      </a>
     </div>
-  </div>
+  </aside>
 
-  <!-- Navbar -->
-  <header class="navbar" id="navbar">
-    <div class="container navbar__inner">
-      <a href="#top" class="brand" aria-label="Toppins Bake and Cafe, home">
-        <img class="brand__mark" src="images/brand/icon-192.png" alt="Toppins Bakers Crest" width="46" height="46">
-        <span class="brand__text"><span class="brand__name">Toppins</span><span class="brand__sub">Bake and Cafe</span></span>
+  <!-- Architectural Navbar -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="#home" class="brand-link" aria-label="Toppins Bake and Cafe home">
+        <div class="brand-crest-frame">
+          <img class="brand-crest" src="images/brand/icon-192.png" alt="Toppins Bakers crest" width="44" height="44">
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">Toppins</span>
+          <span class="brand-subtitle">Bake and Cafe</span>
+        </div>
       </a>
 
-      <nav class="nav" id="nav" aria-label="Primary">
-        <a href="#iconic">Iconic Items</a>
-        <a href="#menu">Menu</a>
-        <a href="#cakes">Custom Cakes</a>
-        <a href="#about">Our Story</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#visit">Visit</a>
+      <!-- Continuous Page Navigation -->
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="#home" class="site-nav__link is-active">Home</a>
+        <a href="#menu" class="site-nav__link">Menu</a>
+        <a href="#custom-cakes" class="site-nav__link">Custom Cakes</a>
+        <a href="#about" class="site-nav__link">About</a>
+        <a href="#gallery" class="site-nav__link">Gallery</a>
+        <a href="#contact" class="site-nav__link">Contact</a>
       </nav>
 
-      <a class="btn btn--primary navbar__cta" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener">Order on WhatsApp</a>
+      <div class="site-header__actions">
+        <a class="btn btn--primary site-header__cta" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20order." target="_blank" rel="noopener">
+          <span>Order Now</span>
+          <svg class="svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
 
-      <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
-        <span></span><span></span><span></span>
-      </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main id="main">
-    <!-- Hero Section -->
-    <section class="hero" id="top">
-      <div class="container hero__grid">
-        <div class="hero__copy">
-          <p class="eyebrow">Perumbadappu, Malappuram</p>
-          <h1>Sweet moments start here.</h1>
-          <p class="lead">Artisan bakes, velvety cakes, fresh egg puffs and rich shakes from Perumbadappu's favorite bakery. Discover our 5 iconic chef-crafted creations below.</p>
-          <div class="hero__ctas">
-            <a class="btn btn--primary" href="#iconic">Explore Iconic Items</a>
-            <a class="btn btn--ghost" href="#cakes">Order Custom Cake</a>
+  <main id="main-content">
+    <!-- ========================================================================
+         1. HERO SECTION (#home)
+         ======================================================================== -->
+    <section class="editorial-hero" id="home" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="badge-kicker">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <span>Freshly Baked Happiness</span>
+            </div>
+
+            <h1 class="hero-title" id="hero-heading">Crafted with Care, For Every Celebration.</h1>
+            <p class="hero-lead">Artisanal cakes, fresh bakes and delicious café treats made with the finest ingredients, right here in Perumbadappu.</p>
+
+            <div class="hero-ctas">
+              <a class="btn btn--primary btn--lg" href="#menu">
+                <span>Explore Our Menu</span>
+                <svg class="svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a class="btn btn--ghost btn--lg" href="#custom-cakes">
+                <span>Custom Cakes</span>
+              </a>
+            </div>
           </div>
-          <dl class="facts">
-            <div><dt>4.1 / 5</dt><dd>Google rating, 85+ reviews</dd></div>
-            <div><dt>#1</dt><dd>Cafe in Perumbadappu</dd></div>
-            <div><dt>Daily</dt><dd>9:00 AM to 9:30 PM</dd></div>
-          </dl>
+
+          <div class="hero-visual">
+            <div class="hero-visual__frame">
+              <img src="images/chocolate-cake.jpeg" alt="Toppins signature artisanal chocolate cake with rich ganache" width="800" height="800" fetchpriority="high">
+              <div class="hero-badge-seal" aria-hidden="true">
+                <span class="kicker">Freshly Baked</span>
+                <span class="center">Toppins</span>
+                <span class="sub">Bake and Cafe</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="hero__media">
-          <div class="story-card">
-            <img src="images/chocolate-cake.jpeg" alt="Toppins Decadent Chocolate Cake with Ganache" width="1024" height="1536" fetchpriority="high">
-            <video class="story-card__video" id="hero-video" muted loop playsinline preload="metadata" poster="images/chocolate-cake.jpeg" aria-hidden="true" tabindex="-1"><source src="images/hero-demo.mp4" type="video/mp4"></video>
-            <div class="crumbs" id="crumbs" aria-hidden="true"></div>
-            <div class="story-card__label">
-              <span>Chef's Signature</span>
-              <strong>Decadent Chocolate Cake</strong>
+
+        <!-- 3-Column Architectural Quick Info Bar -->
+        <div class="hero-info-bar">
+          <div class="hero-info-bar__item">
+            <div class="hero-info-bar__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="hero-info-bar__text">
+              <strong class="tabular">09:00 AM – 09:30 PM</strong>
+              <span>Open Today (7 Days a Week)</span>
+            </div>
+          </div>
+
+          <div class="hero-info-bar__item">
+            <div class="hero-info-bar__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="hero-info-bar__text">
+              <strong>Perumbadappu</strong>
+              <span>Guruvayur-Althara-Ponnani Road</span>
+            </div>
+          </div>
+
+          <div class="hero-info-bar__item">
+            <div class="hero-info-bar__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="hero-info-bar__text">
+              <strong class="tabular">+91 99950 95100</strong>
+              <span>Call or Order on WhatsApp</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Infinite Marquee Ribbon in Logo Colors -->
-    <div class="marquee-ribbon" aria-hidden="true">
-      <div class="marquee-ribbon__track">
-        <span><span class="star">★</span> CHOCOLATE CAKE</span>
-        <span><span class="star">★</span> LOTUS BISCOFF CHEESECAKE</span>
-        <span><span class="star">★</span> SIGNATURE RED VELVET</span>
-        <span><span class="star">★</span> KERALA EGG PUFFS</span>
-        <span><span class="star">★</span> AUTHENTIC SALANKATIYA</span>
-        <span><span class="star">★</span> #1 CAFE & BAKERY IN PERUMBADAPPU</span>
-        <span><span class="star">★</span> CHOCOLATE CAKE</span>
-        <span><span class="star">★</span> LOTUS BISCOFF CHEESECAKE</span>
-        <span><span class="star">★</span> SIGNATURE RED VELVET</span>
-        <span><span class="star">★</span> KERALA EGG PUFFS</span>
-        <span><span class="star">★</span> AUTHENTIC SALANKATIYA</span>
-        <span><span class="star">★</span> #1 CAFE & BAKERY IN PERUMBADAPPU</span>
-      </div>
-    </div>
 
-    <!-- ========================================================
-         ICONIC ITEMS SHOWCASE SECTION (Senior UI/UX Design)
-         Scroll-driven Pop Effect & Real Photography
-         ======================================================== -->
-    <section class="section iconic-showcase" id="iconic">
+    <!-- ========================================================================
+         2. SPECIALTIES SECTION (#specialties)
+         ======================================================================== -->
+    <section class="section section--stone" id="specialties" aria-labelledby="specialties-heading">
       <div class="container">
-        <header class="section__head">
-          <div class="stars-badge">★ ★ ★</div>
-          <p class="eyebrow">The Masterpieces</p>
-          <h2>Our 5 Iconic Creations</h2>
-          <p class="section__sub">Handcrafted every single day in our Perumbadappu patisserie. Scroll through our most requested signatures and add to your order tray.</p>
-        </header>
-
-        <div class="iconic-list">
-          
-          <!-- ITEM 1: Chocolate Cake -->
-          <article class="iconic-item" data-item="chocolate-cake" data-num="01">
-            <div class="iconic-frame">
-              <span class="iconic-badge"><span class="badge-star">★ ★ ★</span> Chef's Signature</span>
-              <img class="iconic-img" src="images/chocolate-cake.jpeg" alt="Rich moist chocolate cake with creamy ganache" loading="lazy" width="1024" height="1536">
-              <div class="iconic-glare" aria-hidden="true"></div>
-            </div>
-            <div class="iconic-content">
-              <span class="iconic-kicker">01 / Pure Indulgence</span>
-              <h3 class="iconic-title">Decadent Chocolate Cake</h3>
-              <p class="iconic-desc">Rich, moist chocolate cake with a deep cocoa flavour and a soft, tender texture. Topped with smooth, creamy chocolate ganache for the perfect indulgent treat.</p>
-              
-              <div class="iconic-chips">
-                <span>Deep Cocoa Flavour</span>
-                <span>Creamy Ganache</span>
-                <span>Ultra-Moist Texture</span>
-              </div>
-
-              <div class="iconic-actions">
-                <a class="btn btn--primary iconic-cta" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20order%3A%20Decadent%20Chocolate%20Cake." target="_blank" rel="noopener">
-                  <span>Order on WhatsApp</span>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-                <button class="btn-tray-add" data-name="Decadent Chocolate Cake" data-tag="Signature Cake" type="button">
-                  <span>+ Add to Tray</span>
-                </button>
-                <span class="iconic-fresh-note"><span class="pulse-dot"></span> Baked fresh daily</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- ITEM 2: Lotus Cheesecake (Reversed Layout) -->
-          <article class="iconic-item iconic-item--reverse" data-item="lotus-cheesecake" data-num="02">
-            <div class="iconic-frame">
-              <span class="iconic-badge"><span class="badge-star">★</span> Customer Obsession</span>
-              <img class="iconic-img" src="images/lotus-cheese-cake.jpeg" alt="Lotus Biscoff slow baked artisan cheesecake" loading="lazy" width="1080" height="1920">
-              <div class="iconic-glare" aria-hidden="true"></div>
-            </div>
-            <div class="iconic-content">
-              <span class="iconic-kicker">02 / Patisserie Specialty</span>
-              <h3 class="iconic-title">Lotus Biscoff Cheesecake</h3>
-              <p class="iconic-desc">Silky, slow-baked artisan cheesecake layered over a buttery caramelized Lotus Biscoff biscuit crust, generously glazed with warm spiced cookie butter and finished with signature crunch.</p>
-              
-              <div class="iconic-chips">
-                <span>Caramelized Speculoos</span>
-                <span>Artisanal Cheesecake</span>
-                <span>Biscoff Cookie Glaze</span>
-              </div>
-
-              <div class="iconic-actions">
-                <a class="btn btn--primary iconic-cta" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20order%3A%20Lotus%20Biscoff%20Cheesecake." target="_blank" rel="noopener">
-                  <span>Order on WhatsApp</span>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-                <button class="btn-tray-add" data-name="Lotus Biscoff Cheesecake" data-tag="Cheesecake" type="button">
-                  <span>+ Add to Tray</span>
-                </button>
-                <span class="iconic-fresh-note"><span class="pulse-dot"></span> Made in small batches</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- ITEM 3: Red Velvet Cake -->
-          <article class="iconic-item" data-item="red-velvet" data-num="03">
-            <div class="iconic-frame">
-              <span class="iconic-badge"><span class="badge-star">★</span> Celebration Classic</span>
-              <img class="iconic-img" src="images/red-velvet.jpeg" alt="Signature Red Velvet cake with cream cheese frosting" loading="lazy" width="736" height="1097">
-              <div class="iconic-glare" aria-hidden="true"></div>
-            </div>
-            <div class="iconic-content">
-              <span class="iconic-kicker">03 / Patisserie Royale</span>
-              <h3 class="iconic-title">Signature Red Velvet Cake</h3>
-              <p class="iconic-desc">Lush, crimson cocoa sponge with a whisper of buttermilk tang, embraced by cloud-soft Madagascar vanilla cream cheese frosting and fine artisanal cake velvet crumbs.</p>
-              
-              <div class="iconic-chips">
-                <span>Crimson Cocoa Sponge</span>
-                <span>Vanilla Cream Cheese</span>
-                <span>Artisan Crumb Dust</span>
-              </div>
-
-              <div class="iconic-actions">
-                <a class="btn btn--primary iconic-cta" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20order%3A%20Signature%20Red%20Velvet%20Cake." target="_blank" rel="noopener">
-                  <span>Order on WhatsApp</span>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-                <button class="btn-tray-add" data-name="Signature Red Velvet Cake" data-tag="Layer Cake" type="button">
-                  <span>+ Add to Tray</span>
-                </button>
-                <span class="iconic-fresh-note"><span class="pulse-dot"></span> Perfect for celebrations</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- ITEM 4: Kerala Egg Puffs (Reversed Layout) -->
-          <article class="iconic-item iconic-item--reverse" data-item="egg-puffs" data-num="04">
-            <div class="iconic-frame">
-              <span class="iconic-badge"><span class="badge-star">★</span> Oven-Fresh Daily</span>
-              <img class="iconic-img" src="images/egg-puffs.jpeg" alt="Golden flaky Kerala egg puffs fresh from the oven" loading="lazy" width="1098" height="1600">
-              <div class="iconic-glare" aria-hidden="true"></div>
-            </div>
-            <div class="iconic-content">
-              <span class="iconic-kicker">04 / Savory Heritage</span>
-              <h3 class="iconic-title">Hot Kerala Egg Puffs</h3>
-              <p class="iconic-desc">Golden, ultra-flaky multi-layered puff pastry baked fresh daily in our ovens, stuffed with a mouth-watering caramelized onion masala and hard-boiled farm egg seasoned with authentic Malabar spices.</p>
-              
-              <div class="iconic-chips">
-                <span>Flaky Golden Layers</span>
-                <span>Caramelized Onion Masala</span>
-                <span>Fresh Boiled Farm Egg</span>
-              </div>
-
-              <div class="iconic-actions">
-                <a class="btn btn--primary iconic-cta" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20order%3A%20Hot%20Kerala%20Egg%20Puffs." target="_blank" rel="noopener">
-                  <span>Order on WhatsApp</span>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-                <button class="btn-tray-add" data-name="Hot Kerala Egg Puffs" data-tag="Hot Savory" type="button">
-                  <span>+ Add to Tray</span>
-                </button>
-                <span class="iconic-fresh-note"><span class="pulse-dot"></span> Fresh batch every afternoon</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- ITEM 5: Salankatiya -->
-          <article class="iconic-item" data-item="salankatiya" data-num="05">
-            <div class="iconic-frame">
-              <span class="iconic-badge"><span class="badge-star">★</span> Perumbadappu Icon</span>
-              <img class="iconic-img" src="images/salankatiya.jpeg" alt="Traditional crispy sweet Salankatiya ribbon pastry" loading="lazy" width="1206" height="1237">
-              <div class="iconic-glare" aria-hidden="true"></div>
-            </div>
-            <div class="iconic-content">
-              <span class="iconic-kicker">05 / Malabar Tradition</span>
-              <h3 class="iconic-title">Authentic Salankatiya</h3>
-              <p class="iconic-desc">Perumbadappu's beloved traditional delicacy—delicately spiced dough shaped into intricate ribbons, deep-fried to a golden amber crisp, and coated in a fragrant cardamom-infused sweet glaze. An unforgettable evening tea companion.</p>
-              
-              <div class="iconic-chips">
-                <span>Crispy Braided Ribbons</span>
-                <span>Cardamom Glaze</span>
-                <span>Local Heritage Recipe</span>
-              </div>
-
-              <div class="iconic-actions">
-                <a class="btn btn--primary iconic-cta" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20order%3A%20Authentic%20Salankatiya." target="_blank" rel="noopener">
-                  <span>Order on WhatsApp</span>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-                <button class="btn-tray-add" data-name="Authentic Salankatiya" data-tag="Heritage Delicacy" type="button">
-                  <span>+ Add to Tray</span>
-                </button>
-                <span class="iconic-fresh-note"><span class="pulse-dot"></span> A local tea-time classic</span>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Full Filterable Menu -->
-    <section class="section section--stone" id="menu">
-      <div class="container">
-        <header class="section__head">
-          <p class="eyebrow">The Complete Menu</p>
-          <h2>Pick a favourite</h2>
-          <p class="section__sub">A selection of what Toppins is known for. Order individually or add multiple items to your Order Tray.</p>
-        </header>
-
-        <div class="filters" role="group" aria-label="Filter menu">
-          <button class="filter is-active" data-filter="all" aria-pressed="true">All Favorites</button>
-          <button class="filter" data-filter="cakes" aria-pressed="false">Cakes & Cheesecakes</button>
-          <button class="filter" data-filter="pastries" aria-pressed="false">Puffs & Traditional</button>
-          <button class="filter" data-filter="beverages" aria-pressed="false">Beverages & Shakes</button>
-        </div>
-
-        <div class="grid" id="menu-grid">
-          <!-- Chocolate Cake -->
-          <article class="card" data-category="cakes">
-            <div class="card__img"><img src="images/chocolate-cake.jpeg" alt="Decadent Chocolate Cake" loading="lazy" width="1024" height="1536"></div>
-            <div class="card__body">
-              <span class="tag">Bestseller</span>
-              <h3>Decadent Chocolate Cake</h3>
-              <p>Rich cocoa sponge with smooth, creamy chocolate ganache.</p>
-              <div class="card__actions">
-                <a class="link-cta" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20order%3A%20Decadent%20Chocolate%20Cake." target="_blank" rel="noopener">Order &rarr;</a>
-                <button class="btn--tray-small" data-name="Decadent Chocolate Cake" data-tag="Cake" type="button">+ Tray</button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Lotus Cheesecake -->
-          <article class="card" data-category="cakes">
-            <div class="card__img"><img src="images/lotus-cheese-cake.jpeg" alt="Lotus Biscoff Cheesecake" loading="lazy" width="1080" height="1920"></div>
-            <div class="card__body">
-              <span class="tag">Chef's Special</span>
-              <h3>Lotus Biscoff Cheesecake</h3>
-              <p>Slow-baked cheesecake with caramelized cookie crust and Biscoff glaze.</p>
-              <div class="card__actions">
-                <a class="link-cta" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20order%3A%20Lotus%20Biscoff%20Cheesecake." target="_blank" rel="noopener">Order &rarr;</a>
-                <button class="btn--tray-small" data-name="Lotus Biscoff Cheesecake" data-tag="Cheesecake" type="button">+ Tray</button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Red Velvet -->
-          <article class="card" data-category="cakes">
-            <div class="card__img"><img src="images/red-velvet.jpeg" alt="Signature Red Velvet Cake" loading="lazy" width="736" height="1097"></div>
-            <div class="card__body">
-              <span class="tag">Celebration Hit</span>
-              <h3>Signature Red Velvet Cake</h3>
-              <p>Velvet crimson sponge with silky Madagascar cream cheese frosting.</p>
-              <div class="card__actions">
-                <a class="link-cta" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20order%3A%20Signature%20Red%20Velvet%20Cake." target="_blank" rel="noopener">Order &rarr;</a>
-                <button class="btn--tray-small" data-name="Signature Red Velvet Cake" data-tag="Cake" type="button">+ Tray</button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Kerala Egg Puffs -->
-          <article class="card" data-category="pastries">
-            <div class="card__img"><img src="images/egg-puffs.jpeg" alt="Kerala Egg Puffs" loading="lazy" width="1098" height="1600"></div>
-            <div class="card__body">
-              <span class="tag">Oven-Fresh</span>
-              <h3>Kerala Egg Puffs</h3>
-              <p>Flaky, crisp golden pastry filled with spiced onion egg masala.</p>
-              <div class="card__actions">
-                <a class="link-cta" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20order%3A%20Hot%20Kerala%20Egg%20Puffs." target="_blank" rel="noopener">Order &rarr;</a>
-                <button class="btn--tray-small" data-name="Hot Kerala Egg Puffs" data-tag="Savory" type="button">+ Tray</button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Salankatiya -->
-          <article class="card" data-category="pastries">
-            <div class="card__img"><img src="images/salankatiya.jpeg" alt="Authentic Salankatiya" loading="lazy" width="1206" height="1237"></div>
-            <div class="card__body">
-              <span class="tag">Heritage Sweet</span>
-              <h3>Authentic Salankatiya</h3>
-              <p>Crispy fried golden dough ribbons with fragrant cardamom sugar glaze.</p>
-              <div class="card__actions">
-                <a class="link-cta" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20order%3A%20Authentic%20Salankatiya." target="_blank" rel="noopener">Order &rarr;</a>
-                <button class="btn--tray-small" data-name="Authentic Salankatiya" data-tag="Sweet" type="button">+ Tray</button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Ripe Mango Cake -->
-          <article class="card" data-category="cakes">
-            <div class="card__img"><img src="images/mango-cake.jpg" alt="Rich Ripe Mango Cake" loading="lazy" width="1024" height="1024"></div>
-            <div class="card__body">
-              <span class="tag">Seasonal</span>
-              <h3>Rich Ripe Mango Cake</h3>
-              <p>Mango sponge layered with sweet whipped cream and fresh mango pulp.</p>
-              <div class="card__actions">
-                <a class="link-cta" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20order%3A%20Rich%20Ripe%20Mango%20Cake." target="_blank" rel="noopener">Order &rarr;</a>
-                <button class="btn--tray-small" data-name="Rich Ripe Mango Cake" data-tag="Cake" type="button">+ Tray</button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Celebration Cake -->
-          <article class="card" data-category="cakes">
-            <div class="card__img"><img src="images/celebration-cake.jpg" alt="Custom celebration cake" loading="lazy" width="1024" height="1024"></div>
-            <div class="card__body">
-              <span class="tag">By Pre-Order</span>
-              <h3>Celebration & Wedding Cakes</h3>
-              <p>Multi-tier themed cakes for birthdays, weddings, Nikkah and anniversaries.</p>
-              <div class="card__actions">
-                <a class="link-cta" href="#cakes">Order Custom &rarr;</a>
-                <button class="btn--tray-small" data-name="Celebration Theme Cake" data-tag="Custom" type="button">+ Tray</button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Belgian Shakes -->
-          <article class="card" data-category="beverages">
-            <div class="card__img"><img src="images/belgian-shakes.jpg" alt="Belgian chocolate shake" loading="lazy" width="1024" height="1024"></div>
-            <div class="card__body">
-              <span class="tag">Chilled</span>
-              <h3>Belgian Shakes & Coolers</h3>
-              <p>Rich Belgian chocolate shakes, fruit smoothies, mojitos and cold coffee.</p>
-              <div class="card__actions">
-                <a class="link-cta" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20order%3A%20Belgian%20Shakes%20and%20Coolers." target="_blank" rel="noopener">Order &rarr;</a>
-                <button class="btn--tray-small" data-name="Belgian Chocolate Shake" data-tag="Shake" type="button">+ Tray</button>
-              </div>
-            </div>
-          </article>
-        </div>
-        <p class="empty" id="menu-empty" hidden>Nothing in this category yet.</p>
-      </div>
-    </section>
-
-    <!-- ========================================================
-         CUSTOM CAKES SECTION (Real Gourmet Photography & Specs)
-         ======================================================== -->
-    <section class="section cake-studio" id="cakes">
-      <div class="container">
-        <header class="section__head">
-          <p class="eyebrow eyebrow--light">Bespoke Patisserie</p>
-          <h2 style="color: #FFF;">Order Your Custom Cake</h2>
-          <p class="lead lead--light" style="margin: 0 auto;">Celebrate your milestones with an authentic, handcrafted cake from Toppins. Choose your preferred flavour, size, and custom inscription.</p>
-        </header>
-
-        <div class="cake-studio-grid">
-          <!-- Left: Real Gourmet Photography Showcase -->
-          <div class="cake-canvas-wrap">
-            <div class="cake-canvas-header">
-              <span class="cake-canvas-tag">★ Handcrafted by Toppins ★</span>
-              <h3 id="preview-cake-name">Decadent Chocolate Cake</h3>
-            </div>
-
-            <!-- Real High-Definition Food Photograph -->
-            <div class="cake-photo-frame">
-              <img id="cake-preview-img" src="images/chocolate-cake.jpeg" alt="Toppins Custom Cake" width="1024" height="1536">
-              <div class="cake-photo-badge">
-                <span class="star">★</span> <span id="cake-preview-badge">100% In-House Bake</span>
-              </div>
-            </div>
-
-            <!-- Visual Flavour Selector (3x2 on mobile, clean row on desktop) -->
-            <p class="cake-picker-label">Step 1 · Tap to Select Flavour</p>
-            <div class="cake-thumb-strip" id="cake-thumb-strip" role="radiogroup" aria-label="Select Cake Flavour">
-              <button type="button" class="cake-thumb-btn is-active" data-flavor="Decadent Chocolate Cake" aria-label="Decadent Chocolate Cake">
-                <span class="cake-thumb-img-wrap"><img src="images/chocolate-cake.jpeg" alt="Chocolate Cake" width="56" height="56" loading="lazy"></span>
-                <span class="cake-thumb-name">Chocolate</span>
-              </button>
-              <button type="button" class="cake-thumb-btn" data-flavor="Lotus Biscoff Cheesecake" aria-label="Lotus Biscoff Cheesecake">
-                <span class="cake-thumb-img-wrap"><img src="images/lotus-cheese-cake.jpeg" alt="Lotus Cheesecake" width="56" height="56" loading="lazy"></span>
-                <span class="cake-thumb-name">Lotus</span>
-              </button>
-              <button type="button" class="cake-thumb-btn" data-flavor="Signature Red Velvet" aria-label="Signature Red Velvet">
-                <span class="cake-thumb-img-wrap"><img src="images/red-velvet.jpeg" alt="Red Velvet" width="56" height="56" loading="lazy"></span>
-                <span class="cake-thumb-name">Red Velvet</span>
-              </button>
-              <button type="button" class="cake-thumb-btn" data-flavor="Rich Ripe Mango" aria-label="Rich Ripe Mango">
-                <span class="cake-thumb-img-wrap"><img src="images/mango-cake.jpg" alt="Rich Ripe Mango" width="56" height="56" loading="lazy"></span>
-                <span class="cake-thumb-name">Mango</span>
-              </button>
-              <button type="button" class="cake-thumb-btn" data-flavor="Pistachio Tres Leches" aria-label="Pistachio Tres Leches">
-                <span class="cake-thumb-img-wrap"><img src="images/pistachio-tres-leches.jpg" alt="Pistachio Tres Leches" width="56" height="56" loading="lazy"></span>
-                <span class="cake-thumb-name">Pistachio</span>
-              </button>
-              <button type="button" class="cake-thumb-btn" data-flavor="Celebration Theme / Wedding Cake" aria-label="Celebration & Wedding Theme Cake">
-                <span class="cake-thumb-img-wrap"><img src="images/celebration-cake.jpg" alt="Wedding Cake" width="56" height="56" loading="lazy"></span>
-                <span class="cake-thumb-name">Wedding</span>
-              </button>
-            </div>
+        <header class="section-head">
+          <div class="badge-kicker">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span>Our Specialties</span>
           </div>
+          <h2 id="specialties-heading">More Than Just Cakes.</h2>
+          <p class="section-sub">From everyday fresh bakes to celebration centerpieces, we bring warmth and joy to your table.</p>
+        </header>
 
-          <!-- Right: Customizer Form Controls -->
-          <div class="cake-studio-form">
-            <div class="cake-form-header">
-              <span class="cake-canvas-tag">Step 2 · Customize & Order</span>
-              <div class="cake-selected-indicator">
-                <span>Selected Flavour:</span> <strong id="form-selected-flavor">Decadent Chocolate Cake</strong>
-              </div>
+        <div class="specialties-grid">
+          <!-- Specialty 1: Cakes -->
+          <article class="specialty-card">
+            <div class="specialty-card__media">
+              <img src="images/chocolate-cake.jpeg" alt="Artisan celebration cakes" loading="lazy" width="600" height="450">
             </div>
+            <div class="specialty-card__body">
+              <h3 class="specialty-card__title">Cakes</h3>
+              <p class="specialty-card__desc">For every celebration, handcrafted with Belgian cocoa and fresh dairy cream.</p>
+              <a href="#menu" class="specialty-card__pill">
+                <span>Explore Cakes</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
 
-            <form class="form" id="cake-form" novalidate>
-              <!-- Hidden select for flavor synchronization -->
-              <select id="cake-flavor" name="flavor" style="display: none;" required>
-                <option value="Decadent Chocolate Cake" selected>Decadent Chocolate Cake</option>
-                <option value="Lotus Biscoff Cheesecake">Lotus Biscoff Cheesecake</option>
-                <option value="Signature Red Velvet">Signature Red Velvet</option>
-                <option value="Rich Ripe Mango">Rich Ripe Mango</option>
-                <option value="Pistachio Tres Leches">Pistachio Tres Leches</option>
-                <option value="Celebration Theme / Wedding Cake">Celebration Theme / Wedding Cake</option>
-              </select>
+          <!-- Specialty 2: Pastries -->
+          <article class="specialty-card">
+            <div class="specialty-card__media">
+              <img src="images/lotus-cheese-cake.jpeg" alt="Gourmet patisserie pastries and cheesecakes" loading="lazy" width="600" height="450">
+            </div>
+            <div class="specialty-card__body">
+              <h3 class="specialty-card__title">Pastries</h3>
+              <p class="specialty-card__desc">Small bites, big happiness. Slow-baked cheesecakes and chocolate slices.</p>
+              <a href="#menu" class="specialty-card__pill">
+                <span>Explore Pastries</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
 
-              <!-- Weight Pill Selector -->
-              <div class="field field--full">
-                <label>Select Weight / Size</label>
-                <div class="pill-group" id="weight-pill-group" role="radiogroup" aria-label="Select Weight">
-                  <button type="button" class="pill-opt is-active" data-val="1 kg">1 kg (1 Tier)</button>
-                  <button type="button" class="pill-opt" data-val="1.5 kg">1.5 kg</button>
-                  <button type="button" class="pill-opt" data-val="2 kg">2 kg (2 Tiers)</button>
-                  <button type="button" class="pill-opt" data-val="3 kg">3 kg</button>
-                  <button type="button" class="pill-opt" data-val="5 kg">5 kg (Grand)</button>
+          <!-- Specialty 3: Breads -->
+          <article class="specialty-card">
+            <div class="specialty-card__media">
+              <img src="images/salankatiya.jpeg" alt="Traditional bakes and sweet delicacies" loading="lazy" width="600" height="450">
+            </div>
+            <div class="specialty-card__body">
+              <h3 class="specialty-card__title">Breads &amp; Sweets</h3>
+              <p class="specialty-card__desc">Freshly baked daily, including our iconic authentic Perumbadappu Salankatiya.</p>
+              <a href="#menu" class="specialty-card__pill">
+                <span>Explore Breads</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Specialty 4: Snacks -->
+          <article class="specialty-card">
+            <div class="specialty-card__media">
+              <img src="images/egg-puffs.jpeg" alt="Golden flaky Kerala egg puffs" loading="lazy" width="600" height="450">
+            </div>
+            <div class="specialty-card__body">
+              <h3 class="specialty-card__title">Hot Snacks</h3>
+              <p class="specialty-card__desc">Perfect with your evening tea or coffee. Flaky, oven-hot spiced egg puffs.</p>
+              <a href="#menu" class="specialty-card__pill">
+                <span>Explore Snacks</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         3. MENU SECTION (#menu)
+         ======================================================================== -->
+    <section class="section section--cream" id="menu" aria-labelledby="menu-heading">
+      <div class="container">
+        <header class="section-head">
+          <div class="badge-kicker">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span>Our Menu</span>
+          </div>
+          <h2 id="menu-heading">Freshly Baked, Always a Good Idea.</h2>
+          <p class="section-sub">Explore our wide range of cakes, pastries, breads, snacks and beverages — made with love and the finest ingredients.</p>
+        </header>
+
+        <!-- Category Filter Tabs -->
+        <div class="filter-tabs" role="tablist" aria-label="Menu categories">
+          <button class="filter-tab is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter-tab" data-filter="cakes" role="tab" aria-selected="false">Cakes</button>
+          <button class="filter-tab" data-filter="pastries" role="tab" aria-selected="false">Pastries</button>
+          <button class="filter-tab" data-filter="breads" role="tab" aria-selected="false">Breads</button>
+          <button class="filter-tab" data-filter="snacks" role="tab" aria-selected="false">Snacks</button>
+          <button class="filter-tab" data-filter="beverages" role="tab" aria-selected="false">Beverages</button>
+        </div>
+
+        <!-- Product Card Grid -->
+        <div class="product-grid" id="menu-product-grid">
+          <!-- 1: Chocolate Truffle -->
+          <article class="product-card" data-category="cakes">
+            <div class="product-card__media">
+              <span class="product-card__tag">Signature Bestseller</span>
+              <img src="images/chocolate-cake.jpeg" alt="Signature Chocolate Truffle Cake" loading="lazy" width="600" height="450">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Chocolate Truffle</h3>
+              <p class="product-card__desc">Handcrafted rich dark Belgian chocolate sponge layered with decadent silky ganache.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price tabular">
+                  <span>₹550 <small>onwards</small></span>
                 </div>
-                <select id="cake-weight" name="weight" style="display: none;" required>
-                  <option value="1 kg" selected>1 kg (1 Tier)</option>
-                  <option value="1.5 kg">1.5 kg (1 Tier)</option>
-                  <option value="2 kg">2 kg (2 Tiers - Grand)</option>
-                  <option value="3 kg">3 kg (2 Tiers - Grand)</option>
-                  <option value="5 kg">5 kg (Celebration Tier)</option>
-                  <option value="More than 5 kg">Custom Tier</option>
-                </select>
+                <div class="product-card__actions">
+                  <button class="btn-add-tray" data-name="Chocolate Truffle Cake" data-tag="Layer Cake" type="button">+ Tray</button>
+                  <a class="btn btn--primary btn--sm" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20order%3A%20Chocolate%20Truffle%20Cake." target="_blank" rel="noopener">Order &rarr;</a>
+                </div>
               </div>
+            </div>
+          </article>
 
-              <!-- Manual Occasion Input -->
-              <div class="field field--full">
-                <label for="cake-occasion">Occasion</label>
-                <input type="text" id="cake-occasion" name="occasion" list="occasion-suggestions" placeholder="e.g. Birthday, Wedding, Anniversary, Baby Shower..." required>
-                <datalist id="occasion-suggestions">
-                  <option value="Birthday">
-                  <option value="Wedding / Nikkah">
-                  <option value="Anniversary">
-                  <option value="Baby Shower">
-                  <option value="Engagement">
-                  <option value="Graduation">
-                  <option value="Housewarming">
-                  <option value="Farewell">
-                  <option value="Celebration">
-                </datalist>
+          <!-- 2: Red Velvet -->
+          <article class="product-card" data-category="cakes">
+            <div class="product-card__media">
+              <span class="product-card__tag">Celebration Hit</span>
+              <img src="images/red-velvet.jpeg" alt="Signature Red Velvet Cake" loading="lazy" width="600" height="450">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Red Velvet</h3>
+              <p class="product-card__desc">Crimson cocoa sponge with subtle buttermilk tang and cloud-soft cream cheese.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price tabular">
+                  <span>₹600 <small>onwards</small></span>
+                </div>
+                <div class="product-card__actions">
+                  <button class="btn-add-tray" data-name="Signature Red Velvet Cake" data-tag="Layer Cake" type="button">+ Tray</button>
+                  <a class="btn btn--primary btn--sm" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20order%3A%20Signature%20Red%20Velvet%20Cake." target="_blank" rel="noopener">Order &rarr;</a>
+                </div>
               </div>
+            </div>
+          </article>
 
-              <div class="field field--full">
-                <label for="cake-message">Message On Cake <span class="opt">(Piped icing inscription)</span></label>
-                <input type="text" id="cake-message" name="message" placeholder="e.g. Happy Birthday Fatima! 🎂" maxlength="32">
+          <!-- 3: Butterscotch -->
+          <article class="product-card" data-category="cakes">
+            <div class="product-card__media">
+              <span class="product-card__tag">Customer Favorite</span>
+              <img src="images/butterscotch-cake.jpg" alt="Rich Butterscotch Praline Cake" loading="lazy" width="600" height="450">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Butterscotch</h3>
+              <p class="product-card__desc">Golden caramel sponge filled with roasted praline crunch and butterscotch drip.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price tabular">
+                  <span>₹450 <small>onwards</small></span>
+                </div>
+                <div class="product-card__actions">
+                  <button class="btn-add-tray" data-name="Butterscotch Cake" data-tag="Caramel Cake" type="button">+ Tray</button>
+                  <a class="btn btn--primary btn--sm" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20order%3A%20Butterscotch%20Cake." target="_blank" rel="noopener">Order &rarr;</a>
+                </div>
               </div>
+            </div>
+          </article>
 
-              <div class="field">
-                <label for="cake-name">Your Name</label>
-                <input type="text" id="cake-name" name="name" autocomplete="name" placeholder="e.g. Rahul / Fatima" required>
+          <!-- 4: Black Forest -->
+          <article class="product-card" data-category="cakes">
+            <div class="product-card__media">
+              <span class="product-card__tag">Classic</span>
+              <img src="images/black-forest-cake.jpg" alt="Classic Black Forest Gateau" loading="lazy" width="600" height="450">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Black Forest</h3>
+              <p class="product-card__desc">Layers of light cocoa sponge, fresh vanilla cream, chocolate curls and cherries.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price tabular">
+                  <span>₹550 <small>onwards</small></span>
+                </div>
+                <div class="product-card__actions">
+                  <button class="btn-add-tray" data-name="Black Forest Cake" data-tag="Classic Gateau" type="button">+ Tray</button>
+                  <a class="btn btn--primary btn--sm" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20order%3A%20Black%20Forest%20Cake." target="_blank" rel="noopener">Order &rarr;</a>
+                </div>
               </div>
+            </div>
+          </article>
 
-              <div class="field">
-                <label for="cake-date">Date Needed</label>
-                <input type="date" id="cake-date" name="date" required>
+          <!-- 5: Pineapple -->
+          <article class="product-card" data-category="cakes">
+            <div class="product-card__media">
+              <span class="product-card__tag">Fresh Fruit</span>
+              <img src="images/pineapple-cake.jpg" alt="Fresh Cream Pineapple Cake" loading="lazy" width="600" height="450">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Pineapple</h3>
+              <p class="product-card__desc">Light sponge layered with real pineapple compote and airy dairy cream.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price tabular">
+                  <span>₹500 <small>onwards</small></span>
+                </div>
+                <div class="product-card__actions">
+                  <button class="btn-add-tray" data-name="Pineapple Cake" data-tag="Fruit Cake" type="button">+ Tray</button>
+                  <a class="btn btn--primary btn--sm" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20order%3A%20Pineapple%20Cake." target="_blank" rel="noopener">Order &rarr;</a>
+                </div>
               </div>
+            </div>
+          </article>
 
-              <div class="field field--full">
-                <label for="cake-notes">Theme / Decor Brief <span class="opt">(optional)</span></label>
-                <input type="text" id="cake-notes" name="notes" placeholder="Colours, characters, topper details...">
+          <!-- 6: Lotus Cheesecake -->
+          <article class="product-card" data-category="cakes">
+            <div class="product-card__media">
+              <span class="product-card__tag">Chef's Specialty</span>
+              <img src="images/lotus-cheese-cake.jpeg" alt="Lotus Biscoff Slow-baked Cheesecake" loading="lazy" width="600" height="450">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Lotus Biscoff Cheesecake</h3>
+              <p class="product-card__desc">Slow-baked artisan cheesecake over speculoos biscuit base with warm cookie butter.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price tabular">
+                  <span>₹650 <small>onwards</small></span>
+                </div>
+                <div class="product-card__actions">
+                  <button class="btn-add-tray" data-name="Lotus Biscoff Cheesecake" data-tag="Cheesecake" type="button">+ Tray</button>
+                  <a class="btn btn--primary btn--sm" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20order%3A%20Lotus%20Biscoff%20Cheesecake." target="_blank" rel="noopener">Order &rarr;</a>
+                </div>
               </div>
+            </div>
+          </article>
 
-              <p class="form__error" id="form-error" role="alert" hidden>Please fill in all required fields.</p>
+          <!-- 7: Chocolate Pastry -->
+          <article class="product-card" data-category="pastries">
+            <div class="product-card__media">
+              <span class="product-card__tag">Individual Slice</span>
+              <img src="images/chocolate-cake.jpeg" alt="Chocolate Truffle Pastry Slice" loading="lazy" width="600" height="450">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Chocolate Pastry</h3>
+              <p class="product-card__desc">A decadent single-serve portion of our signature dark Belgian truffle cake.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price tabular">
+                  <span>₹120</span>
+                </div>
+                <div class="product-card__actions">
+                  <button class="btn-add-tray" data-name="Chocolate Pastry" data-tag="Pastry Slice" type="button">+ Tray</button>
+                  <a class="btn btn--primary btn--sm" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20order%3A%20Chocolate%20Pastry." target="_blank" rel="noopener">Order &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </article>
 
-              <button type="submit" class="btn btn--primary btn--block" id="cake-submit">
-                <span>Order Custom Cake on WhatsApp</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-            </form>
+          <!-- 8: Pistachio Tres Leches -->
+          <article class="product-card" data-category="pastries">
+            <div class="product-card__media">
+              <span class="product-card__tag">Milk Cake</span>
+              <img src="images/pistachio-tres-leches.jpg" alt="Rich Pistachio Tres Leches" loading="lazy" width="600" height="450">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Pistachio Tres Leches</h3>
+              <p class="product-card__desc">Ultra-tender sponge soaked in three fragrant milks with Iranian saffron &amp; crushed pistachios.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price tabular">
+                  <span>₹160</span>
+                </div>
+                <div class="product-card__actions">
+                  <button class="btn-add-tray" data-name="Pistachio Tres Leches" data-tag="Tres Leches" type="button">+ Tray</button>
+                  <a class="btn btn--primary btn--sm" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20order%3A%20Pistachio%20Tres%20Leches." target="_blank" rel="noopener">Order &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 9: Blueberry Cheesecake -->
+          <article class="product-card" data-category="pastries">
+            <div class="product-card__media">
+              <span class="product-card__tag">New Release</span>
+              <img src="images/lotus-cheese-cake.jpeg" alt="Blueberry Baked Cheesecake" loading="lazy" width="600" height="450">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Blueberry Cheesecake</h3>
+              <p class="product-card__desc">Dense Philadelphia-style cheesecake crowned with wild blueberry glaze.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price tabular">
+                  <span>₹180 <small>onwards</small></span>
+                </div>
+                <div class="product-card__actions">
+                  <button class="btn-add-tray" data-name="Blueberry Cheesecake" data-tag="Cheesecake Slice" type="button">+ Tray</button>
+                  <a class="btn btn--primary btn--sm" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20order%3A%20Blueberry%20Cheesecake." target="_blank" rel="noopener">Order &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10: Fresh Cream Pastry -->
+          <article class="product-card" data-category="pastries">
+            <div class="product-card__media">
+              <span class="product-card__tag">Daily Special</span>
+              <img src="images/red-velvet.jpeg" alt="Fresh Cream Pastry" loading="lazy" width="600" height="450">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Fresh Cream Pastry</h3>
+              <p class="product-card__desc">Fluffy sponge topped with light whipped cream and berry coulis.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price tabular">
+                  <span>₹90</span>
+                </div>
+                <div class="product-card__actions">
+                  <button class="btn-add-tray" data-name="Fresh Cream Pastry" data-tag="Pastry Slice" type="button">+ Tray</button>
+                  <a class="btn btn--primary btn--sm" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20order%3A%20Fresh%20Cream%20Pastry." target="_blank" rel="noopener">Order &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 11: Malabar Egg Puffs -->
+          <article class="product-card" data-category="snacks">
+            <div class="product-card__media">
+              <span class="product-card__tag">Oven Hot</span>
+              <img src="images/egg-puffs.jpeg" alt="Malabar Egg Puffs" loading="lazy" width="600" height="450">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Malabar Egg Puffs</h3>
+              <p class="product-card__desc">Golden thousand-layer puff pastry wrapped around hard-boiled egg and fragrant onion masala.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price tabular">
+                  <span>₹25</span>
+                </div>
+                <div class="product-card__actions">
+                  <button class="btn-add-tray" data-name="Malabar Egg Puffs" data-tag="Savory Snack" type="button">+ Tray</button>
+                  <a class="btn btn--primary btn--sm" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20order%3A%20Malabar%20Egg%20Puffs." target="_blank" rel="noopener">Order &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 12: Chocolate Brownie -->
+          <article class="product-card" data-category="snacks">
+            <div class="product-card__media">
+              <span class="product-card__tag">Fudgy</span>
+              <img src="images/chocolate-cake.jpeg" alt="Fudge Chocolate Brownie" loading="lazy" width="600" height="450">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Chocolate Brownie</h3>
+              <p class="product-card__desc">Chewy dark chocolate brownie made with Dutch cocoa and walnuts.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price tabular">
+                  <span>₹90</span>
+                </div>
+                <div class="product-card__actions">
+                  <button class="btn-add-tray" data-name="Chocolate Brownie" data-tag="Brownie" type="button">+ Tray</button>
+                  <a class="btn btn--primary btn--sm" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20order%3A%20Chocolate%20Brownie." target="_blank" rel="noopener">Order &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="tray-empty" id="menu-empty" hidden>No products found in this category.</p>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         4. CUSTOM CAKES SECTION (#custom-cakes)
+         ======================================================================== -->
+    <section class="section section--stone" id="custom-cakes" aria-labelledby="custom-heading">
+      <div class="container">
+        <header class="section-head">
+          <div class="badge-kicker">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span>Custom Cakes</span>
           </div>
+          <h2 id="custom-heading">Make It Personal.</h2>
+          <p class="section-sub">Custom cakes for birthdays, anniversaries, weddings and every special moment.</p>
+        </header>
+
+        <!-- Direct Interactive Cake Studio Panel -->
+        <div class="cake-studio-panel" id="studio-form-section">
+          <div class="cake-studio-panel__grid">
+            <!-- Left: Real Photo Live Showcase -->
+            <div class="cake-preview-col">
+              <div class="cake-preview-frame">
+                <img id="cake-preview-img" src="images/chocolate-cake.jpeg" alt="Toppins custom celebration cake preview" width="600" height="600">
+                <div class="cake-preview-badge">
+                  <span id="preview-cake-name">Decadent Chocolate Cake</span>
+                </div>
+              </div>
+
+              <div class="flavour-selector-label">Tap to Switch Flavour:</div>
+              <div class="flavour-thumbs" role="radiogroup" aria-label="Select cake flavour">
+                <button type="button" class="flavour-thumb is-active" data-flavor="Decadent Chocolate Cake" aria-checked="true">
+                  <img src="images/chocolate-cake.jpeg" alt="Chocolate" width="36" height="36">
+                  <span>Chocolate</span>
+                </button>
+                <button type="button" class="flavour-thumb" data-flavor="Lotus Biscoff Cheesecake" aria-checked="false">
+                  <img src="images/lotus-cheese-cake.jpeg" alt="Lotus" width="36" height="36">
+                  <span>Lotus</span>
+                </button>
+                <button type="button" class="flavour-thumb" data-flavor="Signature Red Velvet" aria-checked="false">
+                  <img src="images/red-velvet.jpeg" alt="Red Velvet" width="36" height="36">
+                  <span>Red Velvet</span>
+                </button>
+                <button type="button" class="flavour-thumb" data-flavor="Butterscotch Caramel Cake" aria-checked="false">
+                  <img src="images/butterscotch-cake.jpg" alt="Butterscotch" width="36" height="36">
+                  <span>Butterscotch</span>
+                </button>
+                <button type="button" class="flavour-thumb" data-flavor="Black Forest Classic" aria-checked="false">
+                  <img src="images/black-forest-cake.jpg" alt="Black Forest" width="36" height="36">
+                  <span>Black Forest</span>
+                </button>
+                <button type="button" class="flavour-thumb" data-flavor="Fresh Cream Pineapple" aria-checked="false">
+                  <img src="images/pineapple-cake.jpg" alt="Pineapple" width="36" height="36">
+                  <span>Pineapple</span>
+                </button>
+                <button type="button" class="flavour-thumb" data-flavor="Rich Ripe Mango" aria-checked="false">
+                  <img src="images/mango-cake.jpg" alt="Mango" width="36" height="36">
+                  <span>Mango</span>
+                </button>
+                <button type="button" class="flavour-thumb" data-flavor="Pistachio Tres Leches" aria-checked="false">
+                  <img src="images/pistachio-tres-leches.jpg" alt="Pistachio" width="36" height="36">
+                  <span>Pistachio</span>
+                </button>
+                <button type="button" class="flavour-thumb" data-flavor="Celebration Theme / Wedding Cake" aria-checked="false">
+                  <img src="images/celebration-cake.jpg" alt="Celebration Wedding" width="36" height="36">
+                  <span>Theme / Wedding</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Right: Consultation Form -->
+            <div class="cake-form-col">
+              <form id="cake-form" novalidate>
+                <div class="form-group">
+                  <label for="cake-flavor">Selected Flavour</label>
+                  <select id="cake-flavor" name="flavor" class="form-control" required>
+                    <option value="Decadent Chocolate Cake" selected>Decadent Chocolate Cake</option>
+                    <option value="Lotus Biscoff Cheesecake">Lotus Biscoff Cheesecake</option>
+                    <option value="Signature Red Velvet">Signature Red Velvet</option>
+                    <option value="Butterscotch Caramel Cake">Butterscotch Caramel Cake</option>
+                    <option value="Black Forest Classic">Black Forest Classic</option>
+                    <option value="Fresh Cream Pineapple">Fresh Cream Pineapple</option>
+                    <option value="Rich Ripe Mango">Rich Ripe Mango</option>
+                    <option value="Pistachio Tres Leches">Pistachio Tres Leches</option>
+                    <option value="Celebration Theme / Wedding Cake">Celebration Theme / Wedding Cake</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label>Select Size / Weight</label>
+                  <div class="pill-group" role="radiogroup" aria-label="Select Cake Weight">
+                    <button type="button" class="pill-option is-active" data-val="1 kg" aria-checked="true">1 kg (1 Tier)</button>
+                    <button type="button" class="pill-option" data-val="1.5 kg" aria-checked="false">1.5 kg</button>
+                    <button type="button" class="pill-option" data-val="2 kg" aria-checked="false">2 kg (2 Tiers)</button>
+                    <button type="button" class="pill-option" data-val="3 kg" aria-checked="false">3 kg</button>
+                    <button type="button" class="pill-option" data-val="5 kg" aria-checked="false">5 kg (Grand)</button>
+                  </div>
+                  <input type="hidden" id="cake-weight" name="weight" value="1 kg">
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="cake-occasion">Occasion</label>
+                    <input type="text" id="cake-occasion" name="occasion" class="form-control" list="occasion-list" placeholder="e.g. Birthday, Wedding, Anniversary" required>
+                    <datalist id="occasion-list">
+                      <option value="Birthday">
+                      <option value="Wedding / Nikkah">
+                      <option value="Anniversary">
+                      <option value="Baby Shower">
+                      <option value="Engagement">
+                      <option value="Graduation">
+                      <option value="Housewarming">
+                      <option value="Celebration">
+                    </datalist>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="cake-date">Date Needed</label>
+                    <input type="date" id="cake-date" name="date" class="form-control" required>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="cake-message">Message On Cake <small>(Piped icing inscription)</small></label>
+                  <input type="text" id="cake-message" name="message" class="form-control" placeholder="e.g. Happy 25th Anniversary Mom &amp; Dad" maxlength="36">
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="cake-name">Your Name</label>
+                    <input type="text" id="cake-name" name="name" class="form-control" autocomplete="name" placeholder="Your full name" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="cake-phone">Contact Phone</label>
+                    <input type="tel" id="cake-phone" name="phone" class="form-control" autocomplete="tel" placeholder="+91 99950 00000">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="cake-notes">Design Brief / Theme Details <small>(optional)</small></label>
+                  <textarea id="cake-notes" name="notes" class="form-control" rows="3" placeholder="Color theme, characters, floral details, topper requests..."></textarea>
+                </div>
+
+                <p class="form-error-feedback" id="form-error" role="alert" hidden>Please fill in all required fields before continuing.</p>
+
+                <button type="submit" class="btn btn--primary btn--block btn--lg">
+                  <span>Order Custom Cake on WhatsApp</span>
+                  <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Special Design Callout -->
+        <div class="custom-callout-banner">
+          <div>
+            <h3>Have a Special Design in Mind?</h3>
+            <p>Share your reference photos or theme sketches directly with our master bakers and we will make it happen.</p>
+          </div>
+          <a class="btn btn--outline-wheat btn--lg" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20have%20a%20reference%20photo%20for%20a%20custom%20cake." target="_blank" rel="noopener">
+            <span>Send Reference Photo &rarr;</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section class="section" id="about">
+    <!-- ========================================================================
+         5. ABOUT SECTION (#about) — Baked in-house, made for your table
+         ======================================================================== -->
+    <section class="section section--cream" id="about" aria-labelledby="about-heading">
       <div class="container about">
         <div class="about__media">
-          <img src="images/lotus-cheese-cake.jpeg" alt="Toppins artisanal cakes and pastries" loading="lazy" width="1080" height="1920">
+          <img src="images/lotus-cheese-cake.jpeg" alt="Toppins artisanal cakes and pastries" loading="lazy" width="800" height="600">
         </div>
         <div class="about__copy">
-          <p class="eyebrow">Our story</p>
-          <h2>Baked in-house, made for your table</h2>
+          <div class="badge-kicker">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span>Our Story</span>
+          </div>
+          <h2 id="about-heading">Baked in-house, made for your table</h2>
           <p>Toppins Bake and Cafe sits on the Guruvayur-Althara-Ponnani Road in Perumbadappu, near Puthanpally Central Madrassa. It is a warm community haven for families, friends and travellers seeking something freshly baked, a hot puff, or an indulgent cake.</p>
           <p>We take pride in artisan techniques—from our slow-baked Lotus Biscoff cheesecake to our afternoon-fresh egg puffs and traditional Salankatiya. Our team is known locally for friendly, welcoming hospitality.</p>
           <ul class="values">
@@ -628,191 +744,390 @@
       </div>
     </section>
 
-    <!-- Reviews Section -->
-    <section class="section section--stone" id="reviews">
+    <!-- ========================================================================
+         6. GALLERY SECTION (#gallery)
+         ======================================================================== -->
+    <section class="section section--stone" id="gallery" aria-labelledby="gallery-heading">
       <div class="container">
-        <header class="section__head">
-          <p class="eyebrow">Reviews</p>
-          <h2>What guests say</h2>
-          <div class="reviews-aggregate">
-            <div class="reviews-aggregate__stars">★★★★<span class="star-partial">★</span></div>
-            <span class="reviews-aggregate__score">4.1 / 5</span>
-            <span class="reviews-aggregate__count">Based on 85+ Google Reviews</span>
+        <header class="section-head">
+          <div class="badge-kicker">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span>Our Gallery</span>
           </div>
+          <h2 id="gallery-heading">Moments Made Sweeter.</h2>
+          <p class="section-sub">A glimpse into our cakes, bakes, café and the celebrations we're proud to be a part of.</p>
         </header>
-        <div class="reviews">
-          <figure class="review">
-            <div class="review__stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote>The chocolate cake and cheesecakes are rich, authentic and beautifully presented. The best bakery in Perumbadappu!</blockquote>
-            <figcaption>
-              <strong>Rahul K.</strong>
-              <span>Google Reviews</span>
-            </figcaption>
-          </figure>
-          <figure class="review">
-            <div class="review__stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote>Fresh bakes, hot egg puffs straight from the oven and cold shakes with quick and welcoming staff. Riyas and the team are very hospitable.</blockquote>
-            <figcaption>
-              <strong>Fatima S.</strong>
-              <span>Google Reviews</span>
-            </figcaption>
-          </figure>
-          <figure class="review">
-            <div class="review__stars" aria-label="4 out of 5 stars">★★★★<span class="star-dim">★</span></div>
-            <blockquote>A warm, comfortable place to sit with family. Their Salankatiya and celebration cakes are top tier. Must visit when in the area!</blockquote>
-            <figcaption>
-              <strong>Arjun M.</strong>
-              <span>Google Reviews</span>
-            </figcaption>
-          </figure>
+
+        <!-- Gallery Filter Tabs -->
+        <div class="filter-tabs" role="tablist" aria-label="Gallery categories">
+          <button class="filter-tab is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter-tab" data-filter="cakes" role="tab" aria-selected="false">Cakes</button>
+          <button class="filter-tab" data-filter="pastries" role="tab" aria-selected="false">Pastries</button>
+          <button class="filter-tab" data-filter="cafe" role="tab" aria-selected="false">Café</button>
         </div>
-        <p class="note">Verified feedback from public Google Maps reviews.</p>
+
+        <!-- Editorial Gallery Grid (Compact 4-column layout) -->
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- Item 1: Chocolate Cake -->
+          <div class="gallery-item" data-category="cakes" tabindex="0" role="button" aria-label="View Decadent Chocolate Truffle Cake">
+            <img src="images/chocolate-cake.jpeg" alt="Signature chocolate truffle celebration cake" loading="lazy">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Decadent Chocolate Truffle</span>
+            </div>
+          </div>
+
+          <!-- Item 2: Lotus Cheesecake -->
+          <div class="gallery-item" data-category="cakes" tabindex="0" role="button" aria-label="View Lotus Biscoff Cheesecake">
+            <img src="images/lotus-cheese-cake.jpeg" alt="Slow baked Lotus Biscoff cheesecake" loading="lazy">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Lotus Biscoff Cheesecake</span>
+            </div>
+          </div>
+
+          <!-- Item 3: Red Velvet -->
+          <div class="gallery-item" data-category="cakes" tabindex="0" role="button" aria-label="View Signature Red Velvet Cake">
+            <img src="images/red-velvet.jpeg" alt="Signature Red Velvet layer cake with cream cheese" loading="lazy">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Signature Red Velvet</span>
+            </div>
+          </div>
+
+          <!-- Item 4: Butterscotch -->
+          <div class="gallery-item" data-category="cakes" tabindex="0" role="button" aria-label="View Butterscotch Praline Cake">
+            <img src="images/butterscotch-cake.jpg" alt="Rich butterscotch caramel cake with praline" loading="lazy">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Butterscotch Praline</span>
+            </div>
+          </div>
+
+          <!-- Item 5: Black Forest -->
+          <div class="gallery-item" data-category="cakes" tabindex="0" role="button" aria-label="View Classic Black Forest Gateau">
+            <img src="images/black-forest-cake.jpg" alt="Classic black forest gateau with fresh cream and cherries" loading="lazy">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Classic Black Forest Gateau</span>
+            </div>
+          </div>
+
+          <!-- Item 6: Fresh Pineapple -->
+          <div class="gallery-item" data-category="cakes" tabindex="0" role="button" aria-label="View Fresh Pineapple Gateau">
+            <img src="images/pineapple-cake.jpg" alt="Fresh pineapple gateau with whipped cream" loading="lazy">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Fresh Pineapple Gateau</span>
+            </div>
+          </div>
+
+          <!-- Item 7: Ripe Mango Cake -->
+          <div class="gallery-item" data-category="cakes" tabindex="0" role="button" aria-label="View Mango Cake">
+            <img src="images/mango-cake.jpg" alt="Fresh mango puree celebration cake" loading="lazy">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Seasonal Ripe Mango Cake</span>
+            </div>
+          </div>
+
+          <!-- Item 8: Pistachio Tres Leches -->
+          <div class="gallery-item" data-category="pastries" tabindex="0" role="button" aria-label="View Pistachio Tres Leches">
+            <img src="images/pistachio-tres-leches.jpg" alt="Fragrant pistachio milk cake slice" loading="lazy">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Pistachio Tres Leches</span>
+            </div>
+          </div>
+
+          <!-- Item 9: Celebration Tier Cake -->
+          <div class="gallery-item" data-category="cakes" tabindex="0" role="button" aria-label="View Grand Celebration Wedding Cake">
+            <img src="images/celebration-cake.jpg" alt="Tiered wedding and celebration cake with floral accents" loading="lazy">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Bespoke Wedding &amp; Tier Cake</span>
+            </div>
+          </div>
+
+          <!-- Item 10: Egg Puffs -->
+          <div class="gallery-item" data-category="pastries" tabindex="0" role="button" aria-label="View Golden Malabar Egg Puffs">
+            <img src="images/egg-puffs.jpeg" alt="Oven hot flaky Malabar egg puffs" loading="lazy">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Golden Malabar Egg Puffs</span>
+            </div>
+          </div>
+
+          <!-- Item 11: Salankatiya -->
+          <div class="gallery-item" data-category="pastries" tabindex="0" role="button" aria-label="View Traditional Salankatiya">
+            <img src="images/salankatiya.jpeg" alt="Traditional Perumbadappu Salankatiya sweet delicacies" loading="lazy">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Authentic Salankatiya</span>
+            </div>
+          </div>
+
+          <!-- Item 12: Belgian Shakes -->
+          <div class="gallery-item" data-category="cafe" tabindex="0" role="button" aria-label="View Belgian Shakes & Coolers">
+            <img src="images/belgian-shakes.jpg" alt="Rich Belgian chocolate shake and cafe beverage" loading="lazy">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Belgian Shakes &amp; Coolers</span>
+            </div>
+          </div>
+
+          <!-- Item 13: Cafe Interior -->
+          <div class="gallery-item" data-category="cafe" tabindex="0" role="button" aria-label="View Toppins Cafe Interior">
+            <img src="images/brand/og-image.jpg" alt="Toppins Cafe dining ambiance in Perumbadappu" loading="lazy">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Warm Cafe Ambiance</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="tray-empty" id="gallery-empty" hidden>No photos found in this category.</p>
       </div>
     </section>
 
-    <!-- Visit Us Section -->
-    <section class="section" id="visit">
-      <div class="container visit">
-        <div class="visit__info">
-          <p class="eyebrow">Visit us</p>
-          <h2>Find Toppins</h2>
-          <dl class="details">
-            <div><dt>Address</dt><dd>PX2M+H4C, Near Puthanpally Central Madrassa, Guruvayur-Althara-Ponnani Road, Perumbadappu, Kerala 679580</dd></div>
-            <div><dt>Hours</dt><dd>Monday to Sunday, 9:00 AM to 9:30 PM</dd></div>
-            <div><dt>Phone and WhatsApp</dt><dd><a href="tel:+919995095100">+91 99950 95100</a></dd></div>
-            <div><dt>Email</dt><dd><a href="mailto:toppinsbakes@gmail.com">toppinsbakes@gmail.com</a></dd></div>
-          </dl>
-          <a class="btn btn--primary" href="https://www.google.com/maps/search/?api=1&query=PX2M%2BH4C%20Perumbadappu%20Kerala" target="_blank" rel="noopener">Get directions</a>
-        </div>
-        <div class="visit__map">
-          <iframe title="Map showing Toppins Bake and Cafe, Perumbadappu" src="https://maps.google.com/maps?q=PX2M%2BH4C%20Perumbadappu%20Kerala&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    <!-- ========================================================================
+         7. CONTACT SECTION (#contact)
+         ======================================================================== -->
+    <section class="section section--cream" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <header class="section-head">
+          <div class="badge-kicker">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span>Get in Touch</span>
+          </div>
+          <h2 id="contact-heading">We'd Love to Hear From You.</h2>
+          <p class="section-sub">Visit us, call us or drop a message. We're always here to help.</p>
+        </header>
+
+        <!-- 2-Column Contact Layout -->
+        <div class="contact-layout-grid">
+          <!-- Left Column: Details & Map -->
+          <div class="contact-info-col">
+            <!-- Card 1: Location -->
+            <div class="contact-card">
+              <div class="contact-card__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-card__content">
+                <strong>Visit Us</strong>
+                <p>Near Puthanpally Central Madrassa,<br>Guruvayur–Althara–Ponnani Road,<br>Perumbadappu, Kerala 679580</p>
+                <a class="link-action" href="https://www.google.com/maps/search/?api=1&query=PX2M%2BH4C%20Perumbadappu%20Kerala" target="_blank" rel="noopener">
+                  <span>Get Directions on Google Maps</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 2: Phone & WhatsApp -->
+            <div class="contact-card">
+              <div class="contact-card__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="contact-card__content">
+                <strong>Call or WhatsApp</strong>
+                <p class="tabular">+91 99950 95100<br>Hours: 09:00 AM – 09:30 PM (Daily)</p>
+                <div style="display: flex; gap: 0.8rem; margin-top: 0.4rem;">
+                  <a class="btn btn--ghost btn--sm" href="tel:+919995095100">Call Bakery</a>
+                  <a class="btn btn--primary btn--sm" href="https://wa.me/919995095100" target="_blank" rel="noopener">WhatsApp Us</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: Email -->
+            <div class="contact-card">
+              <div class="contact-card__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="contact-card__content">
+                <strong>Email Us</strong>
+                <p>toppinsbakes@gmail.com</p>
+                <a class="link-action" href="mailto:toppinsbakes@gmail.com">
+                  <span>Send an Email</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Responsive Map Frame -->
+            <div class="contact-map-frame">
+              <iframe title="Map showing Toppins Bake and Cafe in Perumbadappu, Kerala" src="https://maps.google.com/maps?q=PX2M%2BH4C%20Perumbadappu%20Kerala&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <!-- Right Column: Send Us a Message Form -->
+          <div class="contact-form-panel">
+            <h3>Send Us a Message</h3>
+            <p class="subhead">Fill in your inquiry and our team will get back to you promptly.</p>
+
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name">Your Name</label>
+                <input type="text" id="contact-name" name="name" class="form-control" autocomplete="name" placeholder="e.g. Rahul / Fatima" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-phone">Your Phone Number</label>
+                <input type="tel" id="contact-phone" name="phone" class="form-control" autocomplete="tel" placeholder="+91 99950 00000" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email">Your Email <small>(optional)</small></label>
+                <input type="email" id="contact-email" name="email" class="form-control" autocomplete="email" placeholder="you@example.com">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-service">How Can We Help?</label>
+                <select id="contact-service" name="service" class="form-control">
+                  <option value="General Inquiry">General Inquiry</option>
+                  <option value="Custom Cake Order">Custom Celebration Cake Order</option>
+                  <option value="Event Catering">Party / Event Catering</option>
+                  <option value="Feedback">Feedback or Compliment</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" name="message" class="form-control" rows="4" placeholder="Tell us about your celebration date, guest count, or questions..." required></textarea>
+              </div>
+
+              <p class="form-error-feedback" id="contact-error" role="alert" hidden>Please provide your name, phone number, and message.</p>
+              <p style="background: #E6F7EC; border: 1px solid #3FB950; color: #1E6E38; padding: 0.6rem 1rem; border-radius: var(--radius-md); font-size: 0.85rem; margin-bottom: 1rem;" id="contact-success" role="alert" hidden>Thank you! Your message has been prepared for dispatch.</p>
+
+              <button type="submit" class="btn btn--primary btn--block btn--lg">
+                <span>Send Message on WhatsApp</span>
+                <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Pre-Footer CTA Strip -->
-  <section class="cta-strip" aria-label="Order now">
-    <div class="container cta-strip__inner">
-      <div class="cta-strip__copy">
-        <h2>Craving something fresh?</h2>
-        <p>Order your favourite cakes, egg puffs, and shakes directly on WhatsApp. Ready in minutes.</p>
-      </div>
-      <a class="btn btn--primary btn--lg" href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener">
-        <span>Order on WhatsApp</span>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+  <!-- ========================================================================
+       ACCESSIBLE FULLSCREEN LIGHTBOX MODAL (For Gallery)
+       ======================================================================== -->
+  <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Enlarged image view">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close enlarged photo">&times;</button>
+      <img id="lightbox-img" src="" alt="Enlarged gallery photo preview">
+      <p class="lightbox-caption" id="lightbox-caption"></p>
     </div>
-  </section>
+  </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer__grid">
-      <div class="footer__brand-col">
-        <p class="footer__brand">Toppins</p>
-        <p class="footer__tagline">Bake and Cafe</p>
-        <p class="footer__desc">Perumbadappu's favourite bakery and cafe. Artisan cakes, fresh-from-the-oven puffs, and handcrafted celebration cakes — made with love since day one.</p>
-        <div class="footer__social">
-          <a href="https://www.instagram.com/toppins.bakeandcafe" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-          <a href="https://www.facebook.com/toppinsbakes/" target="_blank" rel="noopener" aria-label="Facebook">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-          </a>
-          <a href="https://wa.me/919995095100" target="_blank" rel="noopener" aria-label="WhatsApp">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          </a>
+  <!-- ========================================================================
+       ARCHITECTURAL FOOTER
+       ======================================================================== -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Toppins</h3>
+          <p class="sub">Bake and Cafe · Perumbadappu</p>
+          <p class="desc">Artisanal cakes, delicious desserts and a warm café experience in Perumbadappu, Kerala. Baked fresh with love and natural ingredients.</p>
+          <div class="footer-socials">
+            <a class="footer-social-link" href="https://www.instagram.com/toppins.bakeandcafe" target="_blank" rel="noopener" aria-label="Toppins Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a class="footer-social-link" href="https://www.facebook.com/toppinsbakes/" target="_blank" rel="noopener" aria-label="Toppins Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a class="footer-social-link" href="https://wa.me/919995095100" target="_blank" rel="noopener" aria-label="Toppins WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-nav">
+          <h4>Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Our Menu</a></li>
+            <li><a href="#custom-cakes">Custom Cakes</a></li>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Visit &amp; Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Visit &amp; Contact</h4>
+          <address>
+            <p>Near Puthanpally Central Madrassa,<br>Guruvayur–Althara–Ponnani Road,<br>Perumbadappu, Kerala 679580</p>
+            <p><a href="tel:+919995095100" class="tabular">+91 99950 95100</a></p>
+            <p><a href="mailto:toppinsbakes@gmail.com">toppinsbakes@gmail.com</a></p>
+            <p class="tabular">Open daily: 09:00 AM – 09:30 PM</p>
+          </address>
         </div>
       </div>
-      <div class="footer__links-col">
-        <h4>Explore</h4>
-        <nav aria-label="Footer navigation">
-          <a href="#iconic">Iconic Items</a>
-          <a href="#menu">Full Menu</a>
-          <a href="#cakes">Custom Cakes</a>
-          <a href="#about">Our Story</a>
-          <a href="#reviews">Reviews</a>
-          <a href="#visit">Visit Us</a>
-        </nav>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Toppins Bake and Cafe. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#contact">Directions</a>
+          <a href="https://wa.me/919995095100" target="_blank" rel="noopener">WhatsApp Chat</a>
+        </div>
       </div>
-      <div class="footer__contact-col">
-        <h4>Get in Touch</h4>
-        <address>
-          <p>Near Puthanpally Central Madrassa,<br>Guruvayur–Althara–Ponnani Road,<br>Perumbadappu, Kerala 679580</p>
-          <p><a href="tel:+919995095100">+91 99950 95100</a></p>
-          <p><a href="mailto:toppinsbakes@gmail.com">toppinsbakes@gmail.com</a></p>
-          <p>Open daily, 9:00 AM – 9:30 PM</p>
-        </address>
-      </div>
-    </div>
-    <div class="container footer__bottom">
-      <p>&copy; 2026 Toppins Bake and Cafe. All rights reserved.</p>
     </div>
   </footer>
 
   <!-- Floating Multi-Item Order Tray Button -->
-  <div class="order-tray-pill" id="order-tray-pill" role="button" aria-label="Open Order Tray">
-    <span class="order-tray-pill__count" id="order-tray-count">0</span>
+  <aside class="order-tray-pill" id="order-tray-pill" role="button" tabindex="0" aria-label="Open your multi-item order tray">
+    <span class="order-tray-pill__count tabular" id="order-tray-count">0</span>
     <span class="order-tray-pill__text">Order Tray</span>
-    <span class="order-tray-pill__btn">View</span>
-  </div>
+  </aside>
 
   <!-- Order Tray Slide-up Drawer -->
   <div class="tray-backdrop" id="tray-backdrop" aria-hidden="true"></div>
-  <aside class="tray-drawer" id="tray-drawer" role="dialog" aria-modal="true" aria-label="Your Order Tray">
+  <aside class="tray-drawer" id="tray-drawer" role="dialog" aria-modal="true" aria-label="Order tray multi-item basket">
     <div class="tray-drawer__head">
-      <h3>Your Order Tray 🛍️</h3>
-      <button class="tray-close-btn" id="tray-close-btn" aria-label="Close Order Tray">✕</button>
+      <h3>Your Order Tray</h3>
+      <button class="tray-close-btn" id="tray-close-btn" aria-label="Close order tray">&times;</button>
     </div>
-    <div class="tray-list" id="tray-items-list">
-      <p class="tray-empty">Your tray is empty. Tap "+ Add to Tray" on any item.</p>
+    <div class="tray-items-list" id="tray-items-list">
+      <p class="tray-empty">Your tray is empty. Tap "+ Add to Tray" on any menu item.</p>
     </div>
-    <button class="btn btn--primary btn--block" id="tray-order-btn" type="button">
-      <span>Send All Items on WhatsApp</span>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </button>
+    <div class="tray-drawer__footer">
+      <button class="btn btn--primary btn--block" id="tray-order-btn" type="button">
+        <span>Order All Items on WhatsApp</span>
+        <svg class="svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </button>
+    </div>
   </aside>
 
-  <!-- Floating WhatsApp CTA -->
-  <!-- Mobile-First Quick-Action Dock (Fixed Luxury Bottom Bar on Mobile) -->
-  <nav class="mobile-dock" id="mobile-dock" aria-label="Quick Actions">
-    <a href="tel:+919995095100" class="mobile-dock__item" aria-label="Call Bakery">
-      <div class="mobile-dock__icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      </div>
-      <span>Call</span>
-    </a>
+  <!-- Mobile Quick Action Dock (Under 768px Viewports) -->
+  <nav class="mobile-dock" aria-label="Quick mobile actions">
+    <div class="mobile-dock__inner">
+      <a href="tel:+919995095100" class="mobile-dock__item" aria-label="Call bakery directly">
+        <div class="mobile-dock__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <span>Call</span>
+      </a>
 
-    <a href="https://www.google.com/maps/search/?api=1&query=PX2M%2BH4C%20Perumbadappu%20Kerala" target="_blank" rel="noopener" class="mobile-dock__item" aria-label="Get Directions">
-      <div class="mobile-dock__icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      </div>
-      <span>Directions</span>
-    </a>
+      <a href="#contact" class="mobile-dock__item" aria-label="Get directions to store">
+        <div class="mobile-dock__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <span>Directions</span>
+      </a>
 
-    <a href="#cakes" class="mobile-dock__item" aria-label="Custom Cakes">
-      <div class="mobile-dock__icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"/><path d="M2 21h20"/><path d="M7 8v2"/><path d="M12 8v2"/><path d="M17 8v2"/><path d="M7 4h.01"/><path d="M12 4h.01"/><path d="M17 4h.01"/></svg>
-      </div>
-      <span>Cakes</span>
-    </a>
+      <a href="#custom-cakes" class="mobile-dock__item" aria-label="Custom cake consultation">
+        <div class="mobile-dock__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"/><path d="M2 21h20"/><path d="M7 8v2"/><path d="M12 8v2"/><path d="M17 8v2"/></svg>
+        </div>
+        <span>Cakes</span>
+      </a>
 
-    <button type="button" class="mobile-dock__item" id="mobile-dock-tray-btn" aria-label="Order Tray">
-      <div class="mobile-dock__icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-        <span class="mobile-dock__badge" id="mobile-dock-badge">0</span>
-      </div>
-      <span>Tray</span>
-    </button>
+      <button type="button" class="mobile-dock__item" id="mobile-dock-tray-btn" aria-label="Open order tray">
+        <div class="mobile-dock__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="mobile-dock__badge tabular" id="mobile-dock-badge">0</span>
+        </div>
+        <span>Tray</span>
+      </button>
 
-    <a href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener" class="mobile-dock__item mobile-dock__item--wa" aria-label="Order on WhatsApp">
-      <div class="mobile-dock__icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      </div>
-      <span>WhatsApp</span>
-    </a>
+      <a href="https://wa.me/919995095100?text=Hello%20Toppins%2C%20I%20would%20like%20to%20order." target="_blank" rel="noopener" class="mobile-dock__item mobile-dock__item--wa" aria-label="Order on WhatsApp">
+        <div class="mobile-dock__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </div>
+        <span>WhatsApp</span>
+      </a>
+    </div>
   </nav>
 
-  <script src="index.js?v=20261018e" defer></script>
+  <script src="index.js" defer></script>
 </body>
 </html>

@@ -1,68 +1,64 @@
-# Toppins Bake and Cafe 🎂☕
+# Toppins Bake and Cafe
 
 [![Production Status](https://img.shields.io/badge/status-live-success?style=flat-square)](https://toppins-mocha.vercel.app)
 [![Website](https://img.shields.io/badge/website-toppins--mocha.vercel.app-red?style=flat-square)](https://toppins-mocha.vercel.app)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
-An award-winning, mobile-first web experience for **Toppins Bake and Cafe**, the iconic community bakery and cafe located on the Guruvayur-Althara-Ponnani Road in Perumbadappu, Malappuram, Kerala.
+An editorial, responsive web experience for **Toppins Bake and Cafe (Toppins Bakers)**, the artisanal bakery and cafe located on the Guruvayur-Althara-Ponnani Road in Perumbadappu, Malappuram / Thrissur border, Kerala.
 
 ---
 
-## 🌟 Highlights & Features
+## Architectural Highlights & Features
 
-- **Decadent Bespoke Cake Studio (`#cakes`):**
-  - Real gourmet food photography with live interactive flavour switching.
-  - 6 Signature Patisserie selections: *Decadent Chocolate*, *Lotus Biscoff Cheesecake*, *Signature Red Velvet*, *Rich Ripe Mango*, *Pistachio Tres Leches*, and *Celebration Theme / Wedding Cake*.
-  - Touch-friendly 1-tap size & tier pill selectors (`1 kg`, `1.5 kg`, `2 kg`, `3 kg`, `5 kg`).
-  - Manual occasion input with quick autocomplete datalist suggestions.
-  - Direct 1-tap WhatsApp order payload generator with complete custom cake specifications.
+- **Unified Continuous Scroll & Editorial Architecture:**
+  - **Home (`#home`):** High-definition bakery hero with circular crest seal, 3-column architectural quick-info ribbon, curated specialties showcase, and cozy café highlight.
+  - **Menu (`#menu`):** Full catalogue with real-time category filtering (`All`, `Cakes`, `Pastries`, `Breads`, `Snacks`, `Beverages`), verified pricing, and instant tray addition.
+  - **Custom Cakes (`#custom-cakes`):** 4-step bespoke consultation studio with interactive real-time flavour switching, weight pills, occasion datalists, and structured WhatsApp enquiry briefs.
+  - **Our Story (`#about`):** Heritage narrative, 4-pillar brand values (Quality, Freshness, Community, Celebration), craftsmanship photography, and philosophy.
+  - **Gallery (`#gallery`):** Responsive editorial masonry grid, category filters, and accessible fullscreen keyboard-friendly lightbox modal.
+  - **Contact & Visit (`#contact`):** Store details, click-to-call, direct WhatsApp, interactive Google Maps embed, and accessible inquiry form.
+  - **Continuous Scroll & Scroll-Spy:** Seamless scrolling throughout all sections on a single continuous page, with automated active-link scroll-spy and smooth sticky-header offset navigation. Standalone endpoints (`/menu`, `/custom-cakes`, `/about`, `/gallery`, `/contact`) deep-link seamlessly into the continuous scroll experience.
 
-- **Floating Order Tray (Multi-Item WhatsApp Cart):**
-  - Seamless tray drawer that aggregates bakery items across categories.
-  - Dynamic quantity counters, instant badge bumps, and single-tap checkout sending structured orders straight to WhatsApp (`+91 99950 95100`).
+- **Floating Order Tray (Multi-Item WhatsApp Commerce Drawer):**
+  - Aggregates bakery selections across pages into a unified slide-up drawer.
+  - Dynamic quantity counters, badge bumps, and single-tap checkout generating structured plain-text orders to `+91 99950 95100`.
 
-- **Iconic Creations Showcase (`#iconic`):**
-  - Card pop and 3D gyroscope tilt micro-interactions.
-  - Interactive confetti burst particle engine celebrating order clicks.
+- **Mobile Quick Action Dock:**
+  - Fixed luxury bottom navigation bar on mobile viewports (< 768px) with one-tap access to **Call**, **Directions**, **Cakes**, **Order Tray**, and **WhatsApp Chat**.
 
-- **Mobile-First Quick Action Dock:**
-  - Glassmorphic bottom navigation bar with one-tap access to **Call**, **Google Maps Directions**, **Custom Cakes**, **Order Tray**, and **WhatsApp Chat**.
+- **Zero-Emoji & Bespoke SVG Iconography:**
+  - Strict elimination of decorative system emojis in favor of bespoke inline SVGs: triple-star motifs, symmetrical wheat dividers, and 1.5px stroke icons.
 
-- **High Performance & Zero Scroll Overhead:**
-  - 100% Native 60/120fps scrolling (zero virtual-scroll lag or jank).
-  - Fully responsive, symmetrical mobile card geometry down to 360px viewports.
-  - Self-hosted Latin WOFF2 typography (*Playfair Display*, *Plus Jakarta Sans*, *Poppins*, *Pacifico*).
-  - Rich SEO, OpenGraph metadata, and structured `Bakery` & `CafeOrCoffeeShop` Schema.org JSON-LD.
+- **Accurate Business Status:**
+  - Computes opening status in `Asia/Kolkata` independently of visitor device timezone (09:00 AM – 09:30 PM IST).
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
-- **Markup:** Semantic HTML5 with accessible ARIA tags
-- **Styling:** Vanilla Modern CSS (CSS Grid, Flexbox, Custom Properties, Glassmorphism)
-- **Scripting:** Pure Vanilla JavaScript (Zero external runtime dependencies)
-- **Deployment:** Vercel Global Edge Network with optimized cache-revalidation headers
-
----
-
-## 🚀 Live Demo
-
-Experience the live website:  
-👉 **[https://toppins-mocha.vercel.app](https://toppins-mocha.vercel.app)**
+- **Markup:** Semantic HTML5 with accessible ARIA landmarks and WCAG 2.1 AA compliance.
+- **Styling:** Vanilla Modern CSS with CSS Grid, Flexbox, Custom Properties, fluid clamp typography, and restrained elevation shadows.
+- **Scripting:** Pure Vanilla JavaScript (Zero runtime bloat or heavy framework dependencies).
+- **Typography:** Self-hosted Latin WOFF2 (*Playfair Display*, *Plus Jakarta Sans*, *Poppins*, *Pacifico*).
+- **Deployment:** Vercel Global Edge Network with cache-revalidation headers and local Node dev server (`scripts/dev-server.mjs`).
 
 ---
 
-## 👥 Contributors
+## Local Development & Testing
 
-Thanks to the contributors who have helped build, design, and optimize this experience:
-
-- **YS Abdul Fahime** ([@Fahim426](https://github.com/Fahim426)) — Lead Developer & Maintainer
-- **Junaidh Hamsa** ([@junaidhhamsa-sys](https://github.com/junaidhhamsa-sys)) — Contributor
+1. **Start the local dev server:**
+   ```bash
+   node scripts/dev-server.mjs
+   # or
+   npm run dev
+   ```
+2. Open `http://localhost:4173` in your browser.
 
 ---
 
-## 📍 Visit Toppins Bake & Cafe
+## Visit Toppins Bake and Cafe
 
 - **Address:** Near Puthanpally Central Madrassa, Guruvayur-Althara-Ponnani Road, Perumbadappu, Kerala 679580
 - **Phone:** [+91 99950 95100](tel:+919995095100)
-- **Hours:** 9:00 AM – 9:30 PM, Open 7 Days a Week
+- **WhatsApp:** [+91 99950 95100](https://wa.me/919995095100)
+- **Hours:** 09:00 AM – 09:30 PM IST, Open 7 Days a Week

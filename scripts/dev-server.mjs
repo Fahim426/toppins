@@ -31,7 +31,7 @@ const server = http.createServer((req, res) => {
   try {
     let reqPath = decodeURI(req.url.split('?')[0]);
     if (reqPath === '/' || reqPath === '') reqPath = '/index.html';
-    const filePath = path.join(root, reqPath);
+    let filePath = path.join(root, reqPath);
     
     // Security check
     if (!filePath.startsWith(root)) {
@@ -40,8 +40,14 @@ const server = http.createServer((req, res) => {
     }
 
     if (!fs.existsSync(filePath) || fs.statSync(filePath).isDirectory()) {
-      res.statusCode = 404;
-      return res.end('Not Found');
+      if (fs.existsSync(filePath + '.html') && fs.statSync(filePath + '.html').isFile()) {
+        filePath = filePath + '.html';
+      } else if (fs.existsSync(path.join(filePath, 'index.html'))) {
+        filePath = path.join(filePath, 'index.html');
+      } else {
+        res.statusCode = 404;
+        return res.end('Not Found');
+      }
     }
 
     const ext = path.extname(filePath).toLowerCase();

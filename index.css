@@ -1734,9 +1734,84 @@ p:last-child { margin-bottom: 0; }
   /* Menu Cards Mobile */
   .product-grid { grid-template-columns: 1fr; gap: 1.4rem; }
 
-  /* Custom Cakes Mobile */
+  .container {
+    width: min(100% - 1.5rem, 1200px);
+    margin-inline: auto;
+  }
+
+  /* Custom Cakes Mobile (Symmetrical Rounded Card & No Overflow) */
   .cake-steps-row { grid-template-columns: 1fr; }
-  .flavour-thumbs { grid-template-columns: repeat(2, 1fr); }
+  .cake-studio-panel {
+    padding: 1.25rem 1rem;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+  }
+  .cake-studio-panel__grid {
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    min-width: 0;
+    gap: 1.8rem;
+  }
+  .cake-preview-col {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    position: static;
+    margin: 0 auto;
+  }
+  .cake-preview-frame {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto 1.2rem;
+    border-radius: 16px;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .flavour-thumbs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    min-width: 0;
+    gap: 0.5rem;
+    box-sizing: border-box;
+  }
+  .flavour-thumb {
+    min-width: 0;
+    padding: 0.4rem 0.45rem;
+    gap: 0.4rem;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  .flavour-thumb img {
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    flex-shrink: 0;
+  }
+  .flavour-thumb span {
+    font-size: 0.72rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+  }
+  .cake-config-col {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .pill-group {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .pill-option {
+    font-size: 0.78rem;
+    padding: 0.45rem 0.8rem;
+  }
   .custom-callout-banner { flex-direction: column; text-align: center; }
 
   /* About Mobile */
@@ -1749,8 +1824,90 @@ p:last-child { margin-bottom: 0; }
   /* Gallery Mobile */
   .gallery-grid { columns: 1; }
 
-  /* Contact Mobile */
-  .contact-layout-grid { grid-template-columns: 1fr; }
+  /* Contact Mobile (Symmetrical Balanced Cards & No Overflow) */
+  .contact-layout-grid {
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    min-width: 0;
+    gap: 1.8rem;
+  }
+  .contact-info-col {
+    width: 100%;
+    min-width: 0;
+    gap: 1.2rem;
+  }
+  .contact-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 1.25rem 1rem;
+    border-radius: 20px;
+    gap: 0.85rem;
+    overflow: hidden;
+  }
+  .contact-card__icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+  .contact-card__content {
+    min-width: 0;
+    flex: 1 1 auto;
+    width: calc(100% - 50px);
+    box-sizing: border-box;
+  }
+  .contact-card__content strong {
+    font-size: 1.1rem;
+    word-break: break-word;
+  }
+  .contact-card__content p {
+    font-size: 0.86rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+  }
+  .contact-card__content a.link-action {
+    font-size: 0.82rem;
+    word-break: break-word;
+    white-space: normal;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.6rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .contact-actions .btn {
+    flex: 1 1 120px;
+    min-width: 0;
+    padding: 0.5rem 0.85rem;
+    font-size: 0.82rem;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .contact-map-frame {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    border-radius: 20px;
+    height: 240px;
+  }
+  .contact-form-panel {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 1.4rem 1rem;
+    border-radius: 20px;
+    overflow: hidden;
+  }
 
   /* Footer Mobile */
   .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
